@@ -166,7 +166,6 @@ body{
 </style>
 <style>
 #pwd-overlay{position:fixed;inset:0;background:#eef0f3;display:flex;align-items:center;justify-content:center;z-index:9999}
-#pwd-overlay.hidden{display:none}
 .pwd-card{background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1);padding:32px 28px;width:100%;max-width:360px;text-align:center}
 .pwd-logo{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .pwd-logo svg{width:18px;height:18px;fill:#fff}
@@ -1160,10 +1159,10 @@ function copyExport(){
 // ── PASSWORD ───────────────────────────────────────────────────────
 const PWD='grodas2026';
 function checkPwd(){
-  const val=document.getElementById('pwdInput').value;
+  const val=document.getElementById('pwdInput').value.trim();
   if(val===PWD){
-    localStorage.setItem('grodas_auth','1');
-    document.getElementById('pwd-overlay').classList.add('hidden');
+    sessionStorage.setItem('grodas_auth','1');
+    document.getElementById('pwd-overlay').style.display='none';
     document.getElementById('mainShell').style.display='';
     render();
   } else {
@@ -1172,12 +1171,12 @@ function checkPwd(){
     document.getElementById('pwdInput').focus();
   }
 }
-if(localStorage.getItem('grodas_auth')==='1'){
-  document.getElementById('pwd-overlay').classList.add('hidden');
+if(sessionStorage.getItem('grodas_auth')==='1'){
+  document.getElementById('pwd-overlay').style.display='none';
   document.getElementById('mainShell').style.display='';
   render();
 } else {
-  setTimeout(()=>document.getElementById('pwdInput').focus(),100);
+  setTimeout(()=>{ const el=document.getElementById('pwdInput'); if(el) el.focus(); },200);
 }
 </script>
 </body>
