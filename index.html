@@ -24,47 +24,34 @@ body{
   display:flex;flex-direction:column;align-items:center;padding:20px 14px 60px;
 }
 .shell{width:100%;max-width:640px}
-
-/* Top bar */
 .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
 .brand{display:flex;align-items:center;gap:8px}
 .brand-icon{width:26px;height:26px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center}
 .brand-icon svg{width:14px;height:14px;fill:#fff}
 .brand-name{font-size:10px;font-weight:700;color:var(--green);letter-spacing:.09em;text-transform:uppercase}
+.topbar-right{display:flex;align-items:center;gap:6px}
 .btn-home{font-size:11px;color:var(--gray-400);cursor:pointer;background:none;border:none;font-family:inherit;padding:3px 7px;border-radius:5px;transition:all .15s}
 .btn-home:hover{background:var(--gray-100);color:var(--gray-600)}
-
-/* Progress */
+.btn-lang{font-size:11px;font-weight:700;color:var(--gray-500);cursor:pointer;background:var(--gray-100);border:1.5px solid var(--gray-200);font-family:inherit;padding:3px 9px;border-radius:5px;transition:all .15s;letter-spacing:.04em}
+.btn-lang:hover{background:var(--green-light);border-color:var(--green);color:var(--green)}
 .progress-wrap{margin-bottom:14px}
 .progress-bar-bg{height:2px;background:var(--gray-200);border-radius:2px;overflow:hidden}
 .progress-bar-fill{height:2px;background:var(--green);border-radius:2px;transition:width .4s ease}
 .progress-meta{display:flex;justify-content:space-between;margin-top:4px}
 .progress-step-name{font-size:10px;color:var(--gray-400);font-weight:500}
 .progress-count{font-size:10px;color:var(--gray-400)}
-
-/* Card */
 .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-md);overflow:hidden}
 .card-body{padding:20px}
-
-/* Step labels */
 .step-eyebrow{font-size:9px;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
 .step-title{font-size:1.15rem;font-weight:700;color:var(--gray-900);margin-bottom:3px;line-height:1.2}
 .step-hint{font-size:11px;color:var(--gray-400);margin-bottom:16px;line-height:1.4}
-
-/* Questions */
 .qn{margin-bottom:14px}
 .qn:last-child{margin-bottom:0}
 .qn-title{font-size:12px;font-weight:600;color:var(--gray-800);margin-bottom:2px}
 .qn-hint{font-size:10px;color:var(--gray-400);margin-bottom:5px;line-height:1.3}
-
-/* Options — вертикальний список (default) */
 .opts{display:flex;flex-direction:column;gap:4px}
-
-/* Options — таблетки в ряд */
 .opts-pills{display:flex;flex-wrap:wrap;gap:5px}
 .opts-pills .opt{padding:5px 11px;font-size:12px}
-
-/* Options */
 .opt{
   padding:7px 11px;border-radius:var(--radius-sm);border:1.5px solid var(--gray-200);
   background:#fff;cursor:pointer;font-size:12px;color:var(--gray-600);
@@ -72,8 +59,6 @@ body{
 }
 .opt:hover{border-color:var(--green);color:var(--green);background:var(--green-light)}
 .opt.sel{border-color:var(--green);background:var(--green-light);color:var(--green);font-weight:600}
-
-/* Multi options */
 .opt-multi{
   display:flex;align-items:flex-start;gap:7px;
   padding:6px 10px;border-radius:var(--radius-sm);border:1.5px solid var(--gray-200);
@@ -84,38 +69,26 @@ body{
 .opt-multi.sel{border-color:var(--green);background:var(--green-light);color:var(--green);font-weight:600}
 .chk{width:13px;height:13px;border-radius:3px;border:1.5px solid var(--gray-300);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all .15s;font-size:9px;color:transparent}
 .opt-multi.sel .chk{background:var(--green);border-color:var(--green);color:#fff}
-
-/* Multi pills */
 .opts-pills .opt-multi{padding:5px 10px;font-size:12px}
-
-/* Callouts */
 .note-warn{margin-top:4px;padding:5px 9px;border-radius:var(--radius-sm);background:var(--amber-light);border-left:3px solid var(--amber);font-size:11px;color:var(--amber);line-height:1.3}
 .note-stop{margin-top:4px;padding:5px 9px;border-radius:var(--radius-sm);background:var(--red-light);border-left:3px solid var(--red);font-size:11px;color:var(--red-mid);line-height:1.3}
 .note-info{margin-top:4px;padding:5px 9px;border-radius:var(--radius-sm);background:var(--blue-light);border-left:3px solid var(--blue);font-size:11px;color:var(--blue);line-height:1.3}
-
-/* Text inputs */
 .tf{width:100%;padding:7px 10px;border-radius:var(--radius-sm);border:1.5px solid var(--gray-200);font-size:12px;color:var(--gray-800);font-family:inherit;outline:none;transition:border-color .15s;line-height:1.4;resize:vertical}
 .tf:focus{border-color:var(--green)}
 .tf::placeholder{color:var(--gray-400)}
 .indent{padding-left:12px;border-left:2px solid var(--gray-200);margin-top:6px}
 .divider{height:1px;background:var(--gray-100);margin:16px 0}
-
-/* Footer nav */
 .footer-nav{display:flex;gap:7px;padding:11px 20px;border-top:1px solid var(--gray-100);align-items:center}
 .btn-back{padding:7px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--gray-200);background:#fff;color:var(--gray-600);cursor:pointer;font-size:12px;font-family:inherit;font-weight:500;transition:all .15s}
 .btn-back:hover{border-color:var(--gray-400)}
 .btn-next{padding:7px 18px;border-radius:var(--radius-sm);border:none;background:var(--green);color:#fff;cursor:pointer;font-size:12px;font-family:inherit;font-weight:600;transition:all .15s;margin-left:auto}
 .btn-next:hover{background:var(--green-mid)}
 .btn-next:disabled{background:var(--gray-200);color:var(--gray-400);cursor:not-allowed}
-
-/* Decision badges */
 .decision-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:12px}
 .badge-go{background:#dcfce7;color:#166534}
 .badge-clarify{background:#fef9c3;color:#92400e}
 .badge-nogo{background:var(--red-light);color:var(--red-mid)}
 .badge-pd{background:var(--blue-light);color:var(--blue)}
-
-/* Summary */
 .s-block{margin-bottom:14px}
 .s-block-head{display:flex;align-items:center;gap:5px;margin-bottom:5px}
 .s-icon{font-size:11px}
@@ -126,16 +99,12 @@ body{
 .sum-val{font-size:12px;color:var(--gray-800);line-height:1.3}
 .sum-val.flag-stop{color:var(--red-mid);font-weight:500}
 .sum-val.flag-warn{color:var(--amber);font-weight:500}
-
-/* Export */
 .export-area{background:var(--gray-50);border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px;margin-top:14px;font-family:'SFMono-Regular',Consolas,monospace;font-size:10px;line-height:1.6;color:var(--gray-600);white-space:pre-wrap;max-height:260px;overflow-y:auto}
 .export-actions{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
 .btn-copy{padding:6px 13px;border-radius:var(--radius-sm);font-size:11px;font-family:inherit;font-weight:500;cursor:pointer;transition:all .15s;border:1.5px solid var(--green);background:transparent;color:var(--green)}
 .btn-copy:hover{background:var(--green-light)}
 .btn-new{padding:6px 13px;border-radius:var(--radius-sm);font-size:11px;font-family:inherit;font-weight:500;cursor:pointer;transition:all .15s;border:1.5px solid var(--gray-200);background:#fff;color:var(--gray-600)}
 .btn-new:hover{border-color:var(--gray-400)}
-
-/* AI block */
 .ai-block{border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px;margin-bottom:16px;background:var(--gray-50)}
 .ai-label{font-size:10px;font-weight:700;color:var(--gray-500);letter-spacing:.06em;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:5px}
 .ai-badge{font-size:9px;background:var(--gray-200);color:var(--gray-500);padding:2px 6px;border-radius:20px;font-weight:400;letter-spacing:0;text-transform:none}
@@ -144,8 +113,6 @@ body{
 .ai-btn:hover{background:var(--green-light)}
 .ai-status{font-size:10px;color:var(--gray-400)}
 .ai-note{font-size:10px;color:var(--gray-400);margin-top:4px;line-height:1.3}
-
-/* Welcome screen */
 .welcome-title{font-size:1.45rem;font-weight:700;color:var(--gray-900);margin-bottom:5px;line-height:1.2}
 .welcome-sub{font-size:12px;color:var(--gray-400);margin-bottom:20px;line-height:1.55}
 .role-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -159,8 +126,6 @@ body{
 .role-card-btn{margin-top:12px;width:100%;padding:8px;border-radius:var(--radius-sm);border:none;background:var(--green);color:#fff;font-size:12px;font-family:inherit;font-weight:600;cursor:pointer;transition:all .15s}
 .role-card-btn:hover{background:var(--green-mid)}
 @media(max-width:500px){.role-cards{grid-template-columns:1fr}}
-
-/* NO-GO banner */
 .nogo-banner{padding:10px 13px;background:var(--red-light);border-radius:var(--radius-sm);border:1.5px solid #fca5a5;margin-bottom:14px;font-size:12px;color:var(--red-mid);line-height:1.4}
 .nogo-banner strong{display:block;margin-bottom:3px}
 </style>
@@ -184,9 +149,9 @@ body{
   <div class="pwd-card">
     <div class="pwd-logo"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v11h5v-5h4v5h5V7L10 2z"/></svg></div>
     <div class="pwd-title">Grodas · Shopify Stores Presale</div>
-    <div class="pwd-sub">Введи пароль для доступу</div>
+    <div class="pwd-sub" id="pwdSubText">Введи пароль для доступу</div>
     <input class="pwd-input" id="pwdInput" type="password" placeholder="••••••••••" onkeydown="if(event.key==='Enter')checkPwd()">
-    <button class="pwd-btn" onclick="checkPwd()">Увійти →</button>
+    <button class="pwd-btn" onclick="checkPwd()" id="pwdBtnText">Увійти →</button>
     <div class="pwd-error" id="pwdError"></div>
   </div>
 </div>
@@ -197,7 +162,10 @@ body{
       <div class="brand-icon"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v11h5v-5h4v5h5V7L10 2z"/></svg></div>
       <span class="brand-name">Grodas · Shopify Stores Presale</span>
     </div>
-    <button class="btn-home" id="btnHome" onclick="goHome()" style="display:none">← На головну</button>
+    <div class="topbar-right">
+      <button class="btn-home" id="btnHome" onclick="goHome()" style="display:none">← <span id="btnHomeLabel">На головну</span></button>
+      <button class="btn-lang" id="btnLang" onclick="toggleLang()">EN</button>
+    </div>
   </div>
   <div class="progress-wrap" id="progressWrap" style="display:none">
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
@@ -209,30 +177,1248 @@ body{
   <div class="card">
     <div class="card-body" id="cardBody"></div>
     <div class="footer-nav" id="footerNav" style="display:none">
-      <button class="btn-back" id="btnBack" onclick="goBack()">← Назад</button>
-      <button class="btn-back" id="btnHome2" onclick="goHome()" style="display:none;color:var(--gray-400);border-color:var(--gray-100)">🏠 Головна</button>
-      <button class="btn-next" id="btnNext" onclick="goNext()">Далі →</button>
+      <button class="btn-back" id="btnBack" onclick="goBack()">← <span id="btnBackLabel">Назад</span></button>
+      <button class="btn-back" id="btnHome2" onclick="goHome()" style="display:none;color:var(--gray-400);border-color:var(--gray-100)">🏠 <span id="btnHome2Label">Головна</span></button>
+      <button class="btn-next" id="btnNext" onclick="goNext()"><span id="btnNextLabel">Далі →</span></button>
     </div>
   </div>
 </div>
 
 <script>
 // ═══════════════════════════════════════════════════════════════════
+// i18n
+// ═══════════════════════════════════════════════════════════════════
+let lang = (sessionStorage.getItem('grodas_lang') || 'ua');
+
+const LANG = {
+  ua: {
+    // PWD screen
+    pwd_sub: 'Введи пароль для доступу',
+    pwd_btn: 'Увійти →',
+    pwd_error: 'Невірний пароль',
+    // Nav
+    btn_home: 'На головну',
+    btn_back: 'Назад',
+    btn_next: 'Далі →',
+    btn_summary: 'Сформувати Summary →',
+    btn_home_main: 'Головна',
+    // Welcome
+    welcome_eyebrow: 'Grodas · Shopify Stores Presale',
+    welcome_title: 'Вибери роль',
+    welcome_sub: 'Інструмент для кваліфікації клієнтів і проектів на етапі Presale компанії Grodas. Стосується Shopify магазинів. Обери опитувальник відповідно до своєї ролі і заповни його після контакту з клієнтом. Скопіюй результат і встав в Jira.',
+    sales_title: 'Sales Team',
+    sales_desc: 'Кваліфікація клієнта. Заповнюй під час або після першого контакту.',
+    sales_pills: ['5 кроків', 'GO / NO-GO', '~7 хв'],
+    sales_btn: 'Sales кваліфікація →',
+    pm_title: 'Delivery Team',
+    pm_desc: 'Кваліфікація проекту. Вклей дані від Sales і рухайся вглиб.',
+    pm_pills: ['8 кроків', 'Delivery brief', '~15 хв'],
+    pm_btn: 'PM кваліфікація →',
+    // Step names
+    steps_sales: {client:'Клієнт',project:'Проект і scope',budget:'Бюджет і терміни',decision:'Рішення',summary:'Summary'},
+    steps_pm: {pm_prefill:'Дані від Sales',pm_type:'Тип проекту',pm_business:'Бізнес',pm_tech:'Технічний контекст',pm_design:'Дизайн',pm_func:'Функціональність',pm_integrations:'Інтеграції',pm_timeline:'Терміни і команда',pm_summary:'Summary'},
+    // SALES step 1
+    s1_eyebrow: 'Sales · крок 1 з 4',
+    s1_title: 'Клієнт і контекст',
+    s1_hint: 'Хто клієнт, звідки прийшов, хто приймає рішення.',
+    s1_company: 'Назва компанії або проекту',
+    s1_source: 'Джерело ліда',
+    s1_source_opts: [
+      {id:'referral',label:'Рекомендація'},
+      {id:'inbound',label:'Inbound — сайт, соцмережі'},
+      {id:'outreach',label:'Outreach'},
+      {id:'agency',label:'Через агентство-посередника',note:'Уточни: хто кінцевий клієнт і чи є прямий контакт з DM'},
+      {id:'repeat',label:'Повторний клієнт'},
+      {id:'other',label:'Інше'},
+    ],
+    s1_source_other_q: 'Уточни джерело',
+    s1_source_other_ph: 'Опишіть звідки прийшов клієнт',
+    s1_dm: 'Decision-maker',
+    s1_dm_hint: 'Хто фінально підписує контракт і запускає проект',
+    s1_dm_opts: [
+      {id:'yes',label:'Доступний, спілкуємось напряму'},
+      {id:'proxy',label:'Через посередника — DM ще не залучений',note:'Домовся підключити DM до наступного контакту до передачі в Delivery'},
+      {id:'no',label:'Недоступний або невідомий',stop:'NO-GO: без DM рухатись далі неможливо'},
+    ],
+    s1_dm_name: "Ім'я і роль DM",
+    s1_dm_name_ph: 'Maria — Founder, John — CEO',
+    s1_prev: 'Попередні підрядники',
+    s1_prev_opts: [
+      {id:'no',label:'Ні, перший підрядник'},
+      {id:'yes',label:'Так, є попередній підрядник',note:'Уточни чому розстались і які проблеми були — це ризик'},
+      {id:'unknown',label:'Невідомо'},
+    ],
+    s1_prev_why: 'Чому розстались / які були проблеми?',
+    s1_prev_why_hint: 'Фіксуй навіть якщо розмито — це важливий контекст для Delivery',
+    s1_prev_why_ph: 'Наприклад: повільна розробка, погана комунікація, не вклалися в терміни...',
+    // SALES step 2
+    s2_eyebrow: 'Sales · крок 2 з 4',
+    s2_title: 'Проект і scope',
+    s2_hint: 'Що саме потрібно і чи Shopify підходить.',
+    s2_type: 'Тип проекту',
+    s2_type_hint: 'Визначає маршрут в Delivery',
+    s2_type_opts: [
+      {id:'new',label:'🆕 Новий магазин з нуля'},
+      {id:'redesign',label:'🎨 Редизайн або оновлення існуючого'},
+      {id:'migration',label:'🔄 Міграція з іншої платформи'},
+      {id:'features',label:'⚙️ Додавання функціоналу'},
+      {id:'integration',label:'🔗 Інтеграція з зовнішньою системою'},
+      {id:'support',label:'🛠 Ongoing підтримка / retainer'},
+    ],
+    s2_goal: 'Бізнес-мета',
+    s2_goal_hint: 'Не "хочемо магазин" — а що зміниться в бізнесі',
+    s2_goal_ph: 'Вийти на ринок США, підвищити конверсію, замінити Magento...',
+    s2_fit: 'Shopify підходить для запиту?',
+    s2_fit_opts: [
+      {id:'yes',label:'Так — покриває потреби'},
+      {id:'likely',label:'Ймовірно — треба уточнити на PM'},
+      {id:'no',label:'Ні — вимоги виходять за межі платформи',stop:'NO-GO: Shopify не покриває цей кейс'},
+    ],
+    s2_design: 'Дизайн або референси є?',
+    s2_design_opts: [
+      {id:'full',label:'Є готовий Figma'},
+      {id:'partial',label:'Є брендбук і референси'},
+      {id:'none_theme',label:'Немає — планується готова тема'},
+      {id:'none_needed',label:'Немає — потрібна розробка дизайну',note:'Дизайн з нуля суттєво розширює scope і бюджет'},
+    ],
+    s2_guarantee: 'Клієнт вимагає гарантій результату?',
+    s2_guarantee_hint: 'Зростання продажів, конверсії тощо',
+    s2_guarantee_opts: [
+      {id:'no',label:'Ні — розуміє що відповідаємо за якість реалізації'},
+      {id:'yes',label:'Так — хоче гарантії бізнес-результату',note:'Ризик: необхідно прояснити очікування до підписання контракту'},
+    ],
+    // SALES step 3
+    s3_eyebrow: 'Sales · крок 3 з 4',
+    s3_title: 'Бюджет і терміни',
+    s3_hint: 'Питати прямо і рано. Якщо клієнт ухиляється — запропонуй вилку: «Зазвичай такий проект коштує X–Y. Це ваш діапазон?»',
+    s3_budget: 'Позиція клієнта по бюджету',
+    s3_budget_opts: [
+      {id:'named',label:'Назвав суму або діапазон'},
+      {id:'open',label:'Готовий обговорювати після оцінки'},
+      {id:'unknown',label:'Не визначився — чекає нашу оцінку',note:'Запропонуй діапазони щоб зрозуміти рамки'},
+      {id:'refuses',label:'Відмовляється говорити про бюджет',stop:'NO-GO: без бюджетного контексту оцінка безглузда'},
+    ],
+    s3_range_opts: [
+      {id:'u5k',label:'До $5,000'},
+      {id:'5_15k',label:'$5,000 – $15,000'},
+      {id:'15_30k',label:'$15,000 – $30,000'},
+      {id:'30_50k',label:'$30,000 – $50,000'},
+      {id:'50kp',label:'$50,000+'},
+    ],
+    s3_deadline: 'Жорсткий дедлайн?',
+    s3_deadline_hint: 'Сезон, анонс, захід',
+    s3_deadline_opts: [
+      {id:'no',label:'Ні, без жорстких термінів'},
+      {id:'yes',label:'Так, є конкретна дата або подія'},
+    ],
+    s3_deadline_date: 'Дата або опис',
+    s3_deadline_date_ph: 'До 1 вересня, Black Friday, Q4 2025',
+    s3_deadline_flex: 'Є гнучкість якщо не вкладемось?',
+    s3_deadline_flex_opts: [
+      {id:'flex',label:'Так, є певна гнучкість'},
+      {id:'no',label:'Ні, дедлайн жорсткий',note:'Перевір реалістичність при поточних ресурсах'},
+    ],
+    s3_model: 'Модель співпраці',
+    s3_model_opts: [
+      {id:'fixed',label:'Fixed Price — проект під ключ'},
+      {id:'tm',label:'T&M — оплата за годинами'},
+      {id:'retainer',label:'Retainer — ongoing підтримка'},
+      {id:'tbd',label:'Не визначено'},
+    ],
+    s3_toxic: 'Комунікація нормальна?',
+    s3_toxic_opts: [
+      {id:'no',label:'Так — нормальна ділова комунікація'},
+      {id:'yes',label:'Є проблеми в комунікації',stop:'NO-GO: не починаємо таку співпрацю'},
+    ],
+    s3_notes: 'Нотатки',
+    s3_notes_hint: 'Специфіка клієнта, застереження, важливий контекст',
+    s3_notes_ph: 'Вільний текст...',
+    // SALES decision
+    s4_eyebrow: 'Sales · крок 4 з 4',
+    s4_title: 'Рішення',
+    s4_hint: 'На основі заповнених даних.',
+    nogo_reasons_title: 'Причини зупинки:',
+    nogo_text: 'Зафіксуй причину в Jira і закрий лід. Або поверніться до клієнта з уточнюючими питаннями.',
+    clarify_text: 'Перспективний клієнт. Перед передачею в Delivery — закрий ці питання:',
+    go_text: 'Клієнт кваліфікований. Передай summary в Jira і сповісти PM — він проведе кваліфікацію проекту.',
+    next_summary_hint: 'Далі — Summary для копіювання в Jira.',
+    // SALES nogo reasons
+    nogo_dm: 'Decision-maker недоступний або невідомий',
+    nogo_budget: 'Клієнт відмовляється обговорювати бюджет',
+    nogo_fit: 'Вимоги виходять за межі Shopify',
+    nogo_comm: 'Токсична або неповажна комунікація',
+    // SALES clarify reasons
+    cl_type: 'Тип проекту не визначено',
+    cl_goal: 'Бізнес-мета не озвучена',
+    cl_budget: 'Бюджет — потрібно уточнити діапазон',
+    cl_dm: 'Decision-maker не залучений напряму',
+    cl_guarantee: '⚠️ Клієнт очікує гарантій результату — необхідно прояснити очікування до підписання',
+    // SALES summary labels
+    sum_eyebrow: 'Sales Summary',
+    sum_copy_btn: '📋 Копіювати для Jira',
+    sum_home_btn: '← На головну',
+    sum_new_sales: '+ Новий клієнт',
+    sum_new_pm: '+ Новий бриф',
+    sum_client_block: 'Клієнт',
+    sum_project_block: 'Проект',
+    sum_budget_block: 'Бюджет і терміни',
+    sum_clarify_block: 'Потребує уточнення',
+    sum_nogo_block: 'NO-GO причини',
+    sum_notes_block: 'Нотатки',
+    sum_source_key: 'Джерело',
+    sum_dm_key: 'Decision-maker',
+    sum_dm_status_key: 'DM статус',
+    sum_prev_key: 'Попередній підрядник',
+    sum_prev_detail_key: 'Деталі підрядника',
+    sum_type_key: 'Тип',
+    sum_fit_key: 'Shopify fit',
+    sum_design_key: 'Дизайн',
+    sum_goal_key: 'Бізнес-мета',
+    sum_budget_stance_key: 'Позиція',
+    sum_budget_range_key: 'Діапазон',
+    sum_deadline_key: 'Дедлайн',
+    sum_model_key: 'Модель',
+    // Export text headers
+    exp_sales_header: 'SALES QUALIFICATION SUMMARY',
+    exp_pm_header: 'PM PROJECT QUALIFICATION BRIEF',
+    exp_date: 'Дата',
+    exp_decision: 'Рішення',
+    exp_client: 'КЛІЄНТ',
+    exp_project: 'ПРОЕКТ',
+    exp_budget: 'БЮДЖЕТ І ТЕРМІНИ',
+    exp_design: 'ДИЗАЙН',
+    exp_func: 'ФУНКЦІОНАЛЬНІСТЬ',
+    exp_integrations: 'ІНТЕГРАЦІЇ',
+    exp_timeline: 'ТЕРМІНИ',
+    exp_notes: 'НОТАТКИ',
+    exp_assumptions: 'ASSUMPTIONS',
+    exp_risks: 'RISK LIST',
+    exp_clarify: 'ПОТРЕБУЄ УТОЧНЕННЯ',
+    exp_nogo: 'NO-GO ПРИЧИНИ',
+    exp_footer_sales: '[Grodas · Shopify Stores Presale · Sales]',
+    exp_footer_pm: '[Grodas · Shopify Stores Presale · PM]',
+    dec_go: '✅ GO — передавати на PM',
+    dec_clarify: '⚡ CLARIFY FIRST — є відкриті питання',
+    dec_nogo_pfx: '🚫 NO-GO — ',
+    // PM steps
+    pm_prefill_eyebrow: 'PM · Старт',
+    pm_prefill_title: 'Дані від Sales',
+    pm_prefill_hint: 'Вклей Summary від Sales або будь-який текст про клієнта. Claude заповнить поля автоматично — або починай заповнювати вручну.',
+    pm_ai_label: '✦ AI автозаповнення',
+    pm_ai_badge: 'рекомендовано',
+    pm_ai_key_ph: 'Anthropic API Key (sk-ant-...)',
+    pm_ai_key_show: 'Показати',
+    pm_ai_key_hide: 'Сховати',
+    pm_ai_text_ph: 'Вклей Summary від Sales або вільний текст про клієнта і проект...',
+    pm_ai_btn: '✦ Аналізувати →',
+    pm_ai_loading: '⏳ Аналізую...',
+    pm_ai_done: '✓ Заповнено',
+    pm_ai_note: 'Ключ не зберігається. Запити йдуть напряму на api.anthropic.com.',
+    pm_manual_btn: 'Заповнювати вручну →',
+    pm_manual_sep: '— або продовжуй без AI —',
+    pm_type_eyebrow: 'PM · крок 1 з 7',
+    pm_type_title: 'Тип проекту',
+    pm_type_hint: 'Від цього залежить структура наступних питань.',
+    pm_type_q: 'Тип проекту',
+    pm_type_opts: [
+      {id:'new',label:'🆕 Новий магазин з нуля'},
+      {id:'redesign',label:'🎨 Редизайн / оновлення існуючого Shopify'},
+      {id:'migration',label:'🔄 Міграція з іншої платформи'},
+      {id:'features',label:'⚙️ Додавання функціоналу до існуючого'},
+      {id:'integration',label:'🔗 Інтеграція з зовнішньою системою'},
+      {id:'support',label:'🛠 Ongoing підтримка / retainer'},
+    ],
+    pm_plan_q: 'План Shopify',
+    pm_plan_hint: 'Визначає доступність функціоналу: Checkout extensibility, B2B, Scripts — лише Plus',
+    pm_plan_opts: [
+      {id:'basic',label:'Basic / Grow'},
+      {id:'advanced',label:'Advanced'},
+      {id:'plus',label:'Shopify Plus',info:'Доступно: Checkout extensibility, нативний B2B, Shopify Flow, вищий API rate limit'},
+      {id:'unknown',label:'Невідомо — уточнити'},
+    ],
+    pm_source_q: 'З якої платформи мігруємо?',
+    pm_source_opts: [
+      {id:'woo',label:'WooCommerce'},
+      {id:'magento',label:'Magento / Adobe Commerce'},
+      {id:'bigcommerce',label:'BigCommerce'},
+      {id:'wix',label:'Wix / Squarespace'},
+      {id:'custom',label:'Кастомна платформа'},
+      {id:'other',label:'Інша'},
+    ],
+    pm_source_other_ph: 'Назва поточної платформи',
+    pm_access_q: 'Доступ до поточного магазину?',
+    pm_access_opts: [
+      {id:'owner',label:'Власник акаунту'},
+      {id:'full',label:'Повний доступ'},
+      {id:'partial',label:'Частковий доступ',note:'Уточни що саме недоступно — може блокувати роботу'},
+      {id:'no',label:'Поки немає — надасть після старту'},
+    ],
+    pm_biz_eyebrow: 'PM · крок 2 з 7',
+    pm_biz_title: 'Бізнес і продукт',
+    pm_biz_hint: 'Розуміємо контекст для архітектурних рішень.',
+    pm_company_ph: 'Acme Store',
+    pm_sell_q: 'Що продає клієнт?',
+    pm_sell_opts: [
+      {id:'physical',label:'Фізичні товари'},
+      {id:'digital',label:'Цифрові товари / файли'},
+      {id:'services',label:'Послуги'},
+      {id:'mix',label:'Мікс'},
+    ],
+    pm_sku_q: 'Кількість SKU у каталозі',
+    pm_sku_hint: 'Впливає на архітектуру фільтрів і навантаження на пошук',
+    pm_sku_opts: [
+      {id:'small',label:'До 50'},
+      {id:'med',label:'50 – 500'},
+      {id:'large',label:'500 – 2 000'},
+      {id:'xlarge',label:'Понад 2 000',note:'Великий каталог — уточни вимоги до пошуку, фільтрів і перформансу'},
+    ],
+    pm_markets_q: 'Ринки продажів',
+    pm_markets_hint: 'Впливає на мови, валюти, платіжки і Shopify Markets',
+    pm_markets_opts: ['Україна','Польща / Чехія / Словаччина','Решта Європи','США / Канада','Глобально'],
+    pm_markets_note: 'ℹ️ Мультиринковість — уточни чи потрібен Shopify Markets або окремі магазини для кожного ринку',
+    pm_goal_q: 'Бізнес-мета проекту',
+    pm_goal_hint: 'Що конкретно має змінитись в бізнесі',
+    pm_goal_ph: 'Замінити Magento, вийти на EU ринок, підвищити конверсію...',
+    pm_migrate_q: 'Що потрібно мігрувати?',
+    pm_migrate_opts: [
+      {id:'products',label:'Продукти і варіанти'},
+      {id:'customers',label:'Клієнти і акаунти'},
+      {id:'orders',label:'Історія замовлень'},
+      {id:'content',label:'Контент (блог, сторінки)'},
+      {id:'seo',label:'SEO — URL структура, редиректи',note:'Критично: без редиректів — втрата органічного трафіку'},
+    ],
+    pm_export_q: 'Є можливість отримати експорт даних з поточної платформи?',
+    pm_export_opts: [
+      {id:'yes',label:'Так, є повний доступ'},
+      {id:'partial',label:'Частковий — деяких даних немає'},
+      {id:'no',label:'Ні — залежимо від вендора',note:'Ризик: вендор може обмежити або затримати експорт'},
+    ],
+    pm_tech_eyebrow: 'PM · крок 3 з 7',
+    pm_tech_title: 'Технічний контекст',
+    pm_tech_hint: 'Уточнюємо деталі по типу проекту.',
+    pm_theme_q: 'Яка тема планується?',
+    pm_theme_opts: [
+      {id:'dawn',label:'Shopify Dawn (безкоштовна)'},
+      {id:'premium',label:'Преміум тема (купована)'},
+      {id:'custom',label:'Кастомна тема з нуля',note:'Суттєво вищий бюджет і терміни'},
+      {id:'tbd',label:'Ще не вирішено'},
+    ],
+    pm_existing_site_q: 'Є поточний сайт або посилання на нього?',
+    pm_existing_site_opts: [
+      {id:'yes',label:'Так'},
+      {id:'no',label:'Ні — старт з нуля'},
+    ],
+    pm_shopify_access_q: 'Shopify акаунт вже є?',
+    pm_shopify_access_opts: [
+      {id:'yes',label:'Так, вже є'},
+      {id:'client_creates',label:'Клієнт створить і запросить'},
+      {id:'agency_creates',label:'Агентство створює Development Store'},
+    ],
+    pm_current_theme_q: 'Яка поточна тема?',
+    pm_current_theme_hint: 'Назва, версія, звідки — впливає на scope кастомізації',
+    pm_current_theme_ph: 'Наприклад: Dawn 10.x, або кастомна від агентства X',
+    pm_theme_type_q: 'Тема куплена чи кастомна?',
+    pm_theme_type_opts: [
+      {id:'free',label:'Безкоштовна Shopify тема'},
+      {id:'premium',label:'Преміум (куплена)'},
+      {id:'custom',label:'Кастомна розробка',note:'Кастомна тема без документації — ризик непередбачених витрат на розуміння архітектури'},
+    ],
+    pm_checkout_q: 'Зміни зачіпають Checkout або Cart?',
+    pm_checkout_hint: 'Checkout extensibility — тільки Shopify Plus',
+    pm_checkout_opts: [
+      {id:'no',label:'Ні'},
+      {id:'cart',label:'Тільки Cart'},
+      {id:'checkout',label:'Checkout',note:'Checkout extensibility доступний лише на Shopify Plus'},
+    ],
+    pm_integration_sys_q: 'Яка система для інтеграції?',
+    pm_integration_sys_hint: 'Назва і версія — критично для оцінки',
+    pm_integration_sys_ph: 'Назва системи, версія',
+    pm_integration_app_q: 'Є готовий Shopify App для цієї системи?',
+    pm_integration_app_opts: [
+      {id:'yes',label:'Так, є готовий App',info:'Готовий App = менший бюджет розробки, але ongoing підписка'},
+      {id:'no',label:'Ні — потрібна кастомна інтеграція'},
+      {id:'partial',label:'Є App але не покриває всі потреби'},
+    ],
+    pm_api_docs_q: 'API документація доступна?',
+    pm_api_docs_opts: [
+      {id:'yes',label:'Так, є повна документація'},
+      {id:'partial',label:'Часткова'},
+      {id:'no',label:'Немає',note:'Ризик: без документації оцінка інтеграції неможлива'},
+    ],
+    pm_sync_q: 'Частота синхронізації?',
+    pm_sync_opts: [
+      {id:'realtime',label:'Реал-тайм / webhook',note:'Реал-тайм синхронізація суттєво збільшує архітектурну складність і бюджет'},
+      {id:'scheduled',label:'По розкладу (batch)'},
+      {id:'manual',label:'Ручна або подієва'},
+      {id:'tbd',label:'Не визначено'},
+    ],
+    pm_support_scope_q: 'Що входить у scope підтримки?',
+    pm_support_opts: [
+      {id:'bugs',label:'Виправлення багів'},
+      {id:'features',label:'Нові фічі'},
+      {id:'content',label:'Контент і оновлення'},
+      {id:'performance',label:'Перформанс'},
+      {id:'all',label:'Все підряд',note:'Без фіксованого scope підтримка стає безлімітною розробкою — ризик'},
+    ],
+    pm_sla_q: 'Очікування по SLA?',
+    pm_sla_opts: [
+      {id:'4h',label:'Реакція до 4 годин'},
+      {id:'24h',label:'Реакція до 24 годин'},
+      {id:'48h',label:'Реакція до 48 годин'},
+      {id:'tbd',label:'Не визначено'},
+    ],
+    pm_retainer_q: 'Очікуваний обсяг годин / місяць?',
+    pm_retainer_opts: [
+      {id:'s10',label:'До 10 год'},
+      {id:'s20',label:'10 – 20 год'},
+      {id:'s40',label:'20 – 40 год'},
+      {id:'smore',label:'40+ год'},
+      {id:'tbd',label:'Не визначено'},
+    ],
+    pm_perf_q: 'Є вимоги по Core Web Vitals / PageSpeed?',
+    pm_perf_opts: [
+      {id:'critical',label:'Так, є конкретні метрики'},
+      {id:'preferred',label:'Бажано — але не блокер'},
+      {id:'no',label:'Немає вимог'},
+    ],
+    pm_design_eyebrow: 'PM · крок 4 з 7',
+    pm_design_title: 'Дизайн і бренд',
+    pm_design_hint: 'Готовність дизайну напряму впливає на scope і старт розробки.',
+    pm_brand_q: 'Брендові матеріали є?',
+    pm_brand_opts: [
+      {id:'full',label:'Повний брендбук або brand guidelines'},
+      {id:'partial',label:'Є частково — логотип, кольори без гайду'},
+      {id:'none_theme',label:'Немає — хочемо готову тему без кастомізації'},
+      {id:'none_develop',label:'Немає — потрібна розробка бренду',note:'Розробка бренду — окремий scope, суттєво збільшує бюджет і терміни'},
+    ],
+    pm_figma_q: 'Є готовий дизайн у Figma або аналогу?',
+    pm_figma_opts: [
+      {id:'full',label:'Так, є затверджений дизайн усіх сторінок'},
+      {id:'partial',label:'Є частково — ключові сторінки'},
+      {id:'wireframes',label:'Є вайрфрейми без дизайну'},
+      {id:'no',label:'Немає — дизайн потрібно розробити'},
+    ],
+    pm_figma_warn: '⚠️ Відсутній або неповний дизайн — ризик затримки старту розробки. Зафіксуй в Assumptions.',
+    pm_photos_q: 'Фотографії товарів?',
+    pm_photos_opts: [
+      {id:'ready',label:'Є готові якісні фото'},
+      {id:'partial',label:'Є частково'},
+      {id:'no',label:'Немає — будемо готувати',note:'Уточни терміни і формат — може затримати наповнення магазину'},
+    ],
+    pm_refs_q: 'Дизайн-референси',
+    pm_refs_hint: 'Попроси посилання прямо зараз',
+    pm_refs_ph: 'https://... або назва магазину (попроси скинути в чат)',
+    pm_content_q: 'Хто відповідає за контент?',
+    pm_content_hint: 'Тексти, описи, банери',
+    pm_content_opts: [
+      {id:'client',label:'Команда клієнта'},
+      {id:'agency',label:'Агентство'},
+      {id:'together',label:'Спільно'},
+      {id:'tbd',label:'Не вирішено',note:'Без чіткої відповідальності — затримки в наповненні магазину'},
+    ],
+    pm_approver_q: 'Хто затверджує дизайн з боку клієнта?',
+    pm_approver_ph: "Ім'я, роль",
+    pm_func_eyebrow: 'PM · крок 5 з 7',
+    pm_func_title: 'Функціональність',
+    pm_func_hint: 'Нестандартний функціонал = кастомна розробка або додаткові apps.',
+    pm_discounts_q: 'Знижки і промоакції',
+    pm_discounts_hint: 'Нативно: %, фіксована сума, безкоштовна доставка, промокоди, buy X get Y',
+    pm_discounts_opts: [
+      {id:'standard',label:'Стандартного Shopify достатньо'},
+      {id:'complex',label:'Складна логіка — тиєрові ціни, умовні бандли',note:'Потрібні Shopify Functions або сторонні apps'},
+    ],
+    pm_accounts_q: 'Особистий кабінет покупця',
+    pm_accounts_opts: [
+      {id:'none',label:'Не потрібен'},
+      {id:'standard',label:'Стандартний — логін, замовлення, адреси'},
+      {id:'extended',label:'Розширений — вішліст, лояльність, бонуси',note:'Потрібні сторонні apps: Smile.io, LoyaltyLion тощо'},
+    ],
+    pm_subs_q: 'Підписки / повторювані замовлення',
+    pm_subs_opts: [
+      {id:'no',label:'Не потрібно'},
+      {id:'yes',label:'Так — потрібні підписки',note:'Shopify не має нативних підписок. Потрібен окремий app: Recharge, Seal Subscriptions тощо'},
+    ],
+    pm_b2b_q: 'B2B функціональність',
+    pm_b2b_opts: [
+      {id:'no',label:'Не потрібна'},
+      {id:'basic',label:'Базова — окремі прайси через app'},
+      {id:'full',label:'Повноцінна нативна B2B',note:'Нативний B2B доступний лише на Shopify Plus'},
+    ],
+    pm_config_q: 'Конфігуратор продуктів',
+    pm_config_opts: [
+      {id:'no',label:'Не потрібен'},
+      {id:'simple',label:'Прості опції — текстове поле, вибір варіантів (нативний Shopify)'},
+      {id:'complex',label:'Складний конфігуратор або умовні опції',note:'Потрібен спеціалізований app або кастомна розробка'},
+    ],
+    pm_multilang_q: 'Мультимовність?',
+    pm_multilang_opts: [
+      {id:'no',label:'Ні — один язик'},
+      {id:'yes_markets',label:'Так — через Shopify Markets / Translate & Adapt'},
+      {id:'yes_apps',label:'Так — через сторонній app (Langify, Weglot)'},
+      {id:'tbd',label:'Потрібно уточнити'},
+    ],
+    pm_custom_pages_q: 'Нестандартні сторінки або секції',
+    pm_custom_pages_hint: 'Опиши що не вкривається стандартними блоками Shopify',
+    pm_custom_pages_ph: 'Наприклад: кастомний лукбук, складний PDP з 3D-переглядом, інтерактивний size guide...',
+    pm_int_eyebrow: 'PM · крок 6 з 7',
+    pm_int_title: 'Інтеграції',
+    pm_int_hint: 'Перед кастомною розробкою завжди перевіряємо: чи є готовий Shopify App.',
+    pm_erp_q: 'CRM або ERP',
+    pm_erp_hint: 'Уточни конкретну назву — критично для оцінки',
+    pm_erp_ph: 'Назва системи або "немає"',
+    pm_accounting_q: 'Система обліку або складу',
+    pm_accounting_ph: 'Назва системи або "немає"',
+    pm_email_q: 'Email-маркетинг / SMS',
+    pm_email_opts: [
+      'Klaviyo','Mailchimp','eSputnik','SendPulse',
+      {id:'other_email',label:'Інший сервіс'},
+      {id:'none_email',label:'Не використовуємо'},
+    ],
+    pm_email_other_q: 'Назва сервісу',
+    pm_email_other_ph: 'Назва email / SMS сервісу',
+    pm_shipping_q: 'Служби доставки',
+    pm_payments_q: 'Платіжні системи',
+    pm_payments_hint: 'Кожна платіжка — окрема інтеграція',
+    pm_analytics_q: 'Аналітика і трекінг',
+    pm_analytics_opts: [
+      'Google Analytics 4','Meta Pixel','TikTok Pixel','Google Ads',
+      {id:'other_analytics',label:'Інше'},{id:'none_analytics',label:'Не потрібно'},
+    ],
+    pm_analytics_other_q: 'Яка аналітика?',
+    pm_analytics_other_ph: 'Назва інструменту',
+    pm_existing_apps_q: 'Чи є вже встановлені Shopify apps?',
+    pm_existing_apps_ph: 'Назви apps або "немає"',
+    pm_other_int_q: 'Інші системи чи інтеграції',
+    pm_other_int_ph: 'Будь-що що ще треба підключити...',
+    pm_timeline_eyebrow: 'PM · крок 7 з 7',
+    pm_timeline_title: 'Терміни і команда',
+    pm_timeline_hint: 'Фіналізуємо пакет для Delivery.',
+    pm_dl_q: 'Жорсткий дедлайн є?',
+    pm_dl_opts: [
+      {id:'no',label:'Ні, без жорстких термінів'},
+      {id:'yes',label:'Так, є дата або подія'},
+    ],
+    pm_dl_date_q: 'Дата або опис',
+    pm_dl_date_ph: '"до 1 вересня", "Black Friday", "Q4 2025"',
+    pm_dl_flex_q: 'Є гнучкість?',
+    pm_dl_flex_opts: [
+      {id:'flex',label:'Так, є певна гнучкість'},
+      {id:'no',label:'Ні, жорстко',note:'Зафіксуй як ризик у оцінці'},
+    ],
+    pm_dm_q: 'Decision-maker клієнта',
+    pm_dm_hint: 'Хто підписує, хто затверджує рішення',
+    pm_dm_ph: "Ім'я, посада",
+    pm_contact_q: 'Основний контакт по проекту',
+    pm_contact_hint: 'Хто відповідає на питання і дає фідбек',
+    pm_contact_ph: 'Ім\'я, месенджер або email',
+    pm_tech_contact_q: 'Є технічний представник на стороні клієнта?',
+    pm_tech_contact_opts: [
+      {id:'yes',label:'Так, є dev або IT менеджер'},
+      {id:'no',label:'Ні, тільки бізнес-сторона',note:'Без технічного представника — уповільнює технічну комунікацію'},
+    ],
+    pm_content_filler_q: 'Хто наповнює магазин товарами?',
+    pm_content_filler_opts: [
+      {id:'client',label:'Команда клієнта'},
+      {id:'agency',label:'Агентство'},
+      {id:'together',label:'Спільно'},
+      {id:'tbd',label:'Не вирішено'},
+    ],
+    pm_post_launch_q: 'Планується підтримка після запуску?',
+    pm_post_launch_opts: [
+      {id:'no',label:'Ні — разовий проект'},
+      {id:'minimal',label:'Точкові правки за запитом'},
+      {id:'retainer',label:'Ongoing retainer',info:'Деталі scope і SLA погоджуємо після завершення основного проекту'},
+    ],
+    pm_testing_q: 'Є ресурс для тестування на стороні клієнта?',
+    pm_testing_hint: 'UAT — хтось хто перевірить замовлення, оплату, форми',
+    pm_testing_opts: [
+      {id:'yes',label:'Так, є людина'},
+      {id:'no',label:'Ні — тестування повністю на агентстві'},
+    ],
+    pm_notes_q: 'Нотатки по дзвінку',
+    pm_notes_hint: 'Все що важливо зафіксувати для Delivery',
+    pm_notes_ph: 'Специфіка клієнта, ризики, важливий контекст...',
+    pm_summary_eyebrow: 'PM Brief · Summary',
+    pm_summary_badge: '📐 PM Delivery Brief',
+    // PM summary section titles
+    pm_sum_project: 'Проект',
+    pm_sum_design: 'Дизайн',
+    pm_sum_func: 'Функціонал',
+    pm_sum_integrations: 'Інтеграції',
+    pm_sum_timeline: 'Терміни і команда',
+    pm_sum_assumptions: 'Assumptions',
+    pm_sum_risks: 'Risk List',
+    pm_sum_notes: 'Нотатки',
+    // PM summary keys
+    pm_key_type: 'Тип',
+    pm_key_plan: 'Shopify план',
+    pm_key_sku: 'Каталог',
+    pm_key_goal: 'Бізнес-мета',
+    pm_key_markets: 'Ринки',
+    pm_key_theme: 'Тема',
+    pm_key_cur_theme: 'Поточна тема',
+    pm_key_brand: 'Бренд',
+    pm_key_figma: 'Figma',
+    pm_key_refs: 'Референси',
+    pm_key_content: 'Контент',
+    pm_key_discounts: 'Знижки',
+    pm_key_accounts: 'Кабінет',
+    pm_key_subs: 'Підписки',
+    pm_key_b2b: 'B2B',
+    pm_key_multilang: 'Мультимова',
+    pm_key_erp: 'ERP/CRM',
+    pm_key_accounting: 'Облік',
+    pm_key_email: 'Email',
+    pm_key_payments: 'Платіжки',
+    pm_key_shipping: 'Доставка',
+    pm_key_deadline: 'Дедлайн',
+    pm_key_dm: 'DM',
+    pm_key_contact: 'Контакт',
+    pm_key_postlaunch: 'Підтримка',
+    pm_no_deadline: 'Без жорсткого дедлайну',
+    // Risks/Assumptions
+    risk_figma: 'Відсутній затверджений дизайн — ризик затримки старту',
+    risk_export: 'Немає доступу до даних для міграції — залежимо від вендора',
+    risk_seo: 'SEO-міграція: без правильних редиректів — втрата органічного трафіку',
+    risk_checkout: 'Checkout extensibility вимагає Shopify Plus — план клієнта потрібно уточнити',
+    risk_b2b: 'Нативний B2B доступний лише на Shopify Plus',
+    risk_content: 'Відповідальність за контент не визначена — ризик затримок',
+    risk_api: 'API документація відсутня — оцінка інтеграції неможлива',
+    risk_realtime: 'Реал-тайм синхронізація — суттєво вища архітектурна складність',
+    risk_custom_int: 'Немає готового App — потрібна кастомна розробка інтеграції',
+    risk_xlarge: 'Великий каталог — уточнити вимоги до пошуку і перформансу',
+    risk_theme: 'Кастомна тема без документації — ризик непередбачених витрат',
+    ass_type_pfx: 'Тип проекту: ',
+    ass_plan_pfx: 'Shopify план: ',
+    ass_sku_pfx: 'Обсяг каталогу: ',
+    ass_sku_sfx: ' SKU',
+    ass_figma_ok: 'Затверджений дизайн у Figma є — розробка може стартувати',
+    ass_figma_no: 'Дизайн не підтверджений — оцінка базується на описі вимог',
+    ass_migration: 'Дані для міграції доступні — аудит проводиться до початку розробки',
+    ass_not_set: 'не визначено',
+  },
+  en: {
+    pwd_sub: 'Enter password to access',
+    pwd_btn: 'Sign in →',
+    pwd_error: 'Incorrect password',
+    btn_home: 'Home',
+    btn_back: 'Back',
+    btn_next: 'Next →',
+    btn_summary: 'Generate Summary →',
+    btn_home_main: 'Home',
+    welcome_eyebrow: 'Grodas · Shopify Stores Presale',
+    welcome_title: 'Select your role',
+    welcome_sub: 'Presale qualification tool for Grodas. Covers Shopify store projects. Fill in after client contact and copy the result to Jira.',
+    sales_title: 'Sales Team',
+    sales_desc: 'Client qualification. Fill in during or after the first contact.',
+    sales_pills: ['5 steps', 'GO / NO-GO', '~7 min'],
+    sales_btn: 'Sales qualification →',
+    pm_title: 'Delivery Team',
+    pm_desc: 'Project qualification. Paste Sales data and go deeper.',
+    pm_pills: ['8 steps', 'Delivery brief', '~15 min'],
+    pm_btn: 'PM qualification →',
+    steps_sales: {client:'Client',project:'Project & scope',budget:'Budget & timeline',decision:'Decision',summary:'Summary'},
+    steps_pm: {pm_prefill:'Sales data',pm_type:'Project type',pm_business:'Business',pm_tech:'Tech context',pm_design:'Design',pm_func:'Functionality',pm_integrations:'Integrations',pm_timeline:'Timeline & team',pm_summary:'Summary'},
+    s1_eyebrow: 'Sales · step 1 of 4',
+    s1_title: 'Client & context',
+    s1_hint: 'Who is the client, where they came from, who makes decisions.',
+    s1_company: 'Company or project name',
+    s1_source: 'Lead source',
+    s1_source_opts: [
+      {id:'referral',label:'Referral'},
+      {id:'inbound',label:'Inbound — website, social media'},
+      {id:'outreach',label:'Outreach'},
+      {id:'agency',label:'Via intermediary agency',note:'Clarify: who is the end client and do you have direct contact with DM'},
+      {id:'repeat',label:'Returning client'},
+      {id:'other',label:'Other'},
+    ],
+    s1_source_other_q: 'Clarify source',
+    s1_source_other_ph: 'Describe where the client came from',
+    s1_dm: 'Decision-maker',
+    s1_dm_hint: 'Who ultimately signs the contract and launches the project',
+    s1_dm_opts: [
+      {id:'yes',label:'Available, talking directly'},
+      {id:'proxy',label:'Via intermediary — DM not yet involved',note:'Arrange to include DM before next contact and before handing off to Delivery'},
+      {id:'no',label:'Unavailable or unknown',stop:'NO-GO: cannot proceed without DM'},
+    ],
+    s1_dm_name: 'DM name and role',
+    s1_dm_name_ph: 'Maria — Founder, John — CEO',
+    s1_prev: 'Previous vendors',
+    s1_prev_opts: [
+      {id:'no',label:'No, first vendor'},
+      {id:'yes',label:'Yes, previous vendor exists',note:'Clarify why they parted ways and what issues arose — this is a risk signal'},
+      {id:'unknown',label:'Unknown'},
+    ],
+    s1_prev_why: 'Why did they part ways / what were the issues?',
+    s1_prev_why_hint: 'Record even vague info — important context for Delivery',
+    s1_prev_why_ph: 'e.g. slow delivery, poor communication, missed deadlines...',
+    s2_eyebrow: 'Sales · step 2 of 4',
+    s2_title: 'Project & scope',
+    s2_hint: 'What exactly is needed and whether Shopify is the right fit.',
+    s2_type: 'Project type',
+    s2_type_hint: 'Determines routing to Delivery',
+    s2_type_opts: [
+      {id:'new',label:'🆕 New store from scratch'},
+      {id:'redesign',label:'🎨 Redesign or update of existing store'},
+      {id:'migration',label:'🔄 Migration from another platform'},
+      {id:'features',label:'⚙️ Adding new features'},
+      {id:'integration',label:'🔗 External system integration'},
+      {id:'support',label:'🛠 Ongoing support / retainer'},
+    ],
+    s2_goal: 'Business goal',
+    s2_goal_hint: 'Not "we want a site" — what will change in the business',
+    s2_goal_ph: 'Enter US market, improve conversion, replace Magento...',
+    s2_fit: 'Is Shopify the right fit?',
+    s2_fit_opts: [
+      {id:'yes',label:'Yes — covers the requirements'},
+      {id:'likely',label:'Likely — needs to be confirmed at PM stage'},
+      {id:'no',label:'No — requirements exceed platform capabilities',stop:'NO-GO: Shopify does not cover this case'},
+    ],
+    s2_design: 'Is there a design or references?',
+    s2_design_opts: [
+      {id:'full',label:'Ready Figma available'},
+      {id:'partial',label:'Brand book and references available'},
+      {id:'none_theme',label:'None — planning to use a ready-made theme'},
+      {id:'none_needed',label:'None — design development needed',note:'Design from scratch significantly expands scope and budget'},
+    ],
+    s2_guarantee: 'Does the client require result guarantees?',
+    s2_guarantee_hint: 'Sales growth, conversion rate, etc.',
+    s2_guarantee_opts: [
+      {id:'no',label:'No — understands we are responsible for implementation quality'},
+      {id:'yes',label:'Yes — wants business result guarantees',note:'Risk: expectations must be clarified before signing the contract'},
+    ],
+    s3_eyebrow: 'Sales · step 3 of 4',
+    s3_title: 'Budget & timeline',
+    s3_hint: 'Ask directly and early. If the client is evasive — offer a range: "Typically this type of project costs X–Y. Is that your range?"',
+    s3_budget: "Client's budget position",
+    s3_budget_opts: [
+      {id:'named',label:'Named a specific amount or range'},
+      {id:'open',label:'Ready to discuss after estimation'},
+      {id:'unknown',label:'Undecided — waiting for our estimate',note:'Offer ranges to understand their frame'},
+      {id:'refuses',label:'Refuses to discuss budget',stop:'NO-GO: estimation is pointless without budget context'},
+    ],
+    s3_range_opts: [
+      {id:'u5k',label:'Up to $5,000'},
+      {id:'5_15k',label:'$5,000 – $15,000'},
+      {id:'15_30k',label:'$15,000 – $30,000'},
+      {id:'30_50k',label:'$30,000 – $50,000'},
+      {id:'50kp',label:'$50,000+'},
+    ],
+    s3_deadline: 'Hard deadline?',
+    s3_deadline_hint: 'Season, announcement, event',
+    s3_deadline_opts: [
+      {id:'no',label:'No hard deadline'},
+      {id:'yes',label:'Yes, specific date or event'},
+    ],
+    s3_deadline_date: 'Date or description',
+    s3_deadline_date_ph: 'By September 1, Black Friday, Q4 2025',
+    s3_deadline_flex: 'Is there flexibility if we miss the deadline?',
+    s3_deadline_flex_opts: [
+      {id:'flex',label:'Yes, some flexibility'},
+      {id:'no',label:'No, strict deadline',note:'Check feasibility with current resources'},
+    ],
+    s3_model: 'Collaboration model',
+    s3_model_opts: [
+      {id:'fixed',label:'Fixed Price — turnkey project'},
+      {id:'tm',label:'T&M — hourly billing'},
+      {id:'retainer',label:'Retainer — ongoing support'},
+      {id:'tbd',label:'Not decided'},
+    ],
+    s3_toxic: 'Is communication normal?',
+    s3_toxic_opts: [
+      {id:'no',label:'Yes — normal business communication'},
+      {id:'yes',label:'There are communication issues',stop:'NO-GO: we do not start this kind of engagement'},
+    ],
+    s3_notes: 'Notes',
+    s3_notes_hint: 'Client specifics, caveats, important context',
+    s3_notes_ph: 'Free text...',
+    s4_eyebrow: 'Sales · step 4 of 4',
+    s4_title: 'Decision',
+    s4_hint: 'Based on the data entered.',
+    nogo_reasons_title: 'Reasons to stop:',
+    nogo_text: 'Record the reason in Jira and close the lead. Or go back to the client with clarifying questions.',
+    clarify_text: 'Promising client. Before handing off to Delivery — close these questions:',
+    go_text: 'Client is qualified. Pass the summary to Jira and notify PM — they will conduct project qualification.',
+    next_summary_hint: 'Next — Summary for copying to Jira.',
+    nogo_dm: 'Decision-maker unavailable or unknown',
+    nogo_budget: 'Client refuses to discuss budget',
+    nogo_fit: 'Requirements exceed Shopify capabilities',
+    nogo_comm: 'Toxic or disrespectful communication',
+    cl_type: 'Project type not defined',
+    cl_goal: 'Business goal not stated',
+    cl_budget: 'Budget — range needs to be clarified',
+    cl_dm: 'Decision-maker not directly involved',
+    cl_guarantee: '⚠️ Client expects result guarantees — expectations must be clarified before signing',
+    sum_eyebrow: 'Sales Summary',
+    sum_copy_btn: '📋 Copy for Jira',
+    sum_home_btn: '← Home',
+    sum_new_sales: '+ New client',
+    sum_new_pm: '+ New brief',
+    sum_client_block: 'Client',
+    sum_project_block: 'Project',
+    sum_budget_block: 'Budget & timeline',
+    sum_clarify_block: 'Needs clarification',
+    sum_nogo_block: 'NO-GO reasons',
+    sum_notes_block: 'Notes',
+    sum_source_key: 'Source',
+    sum_dm_key: 'Decision-maker',
+    sum_dm_status_key: 'DM status',
+    sum_prev_key: 'Previous vendor',
+    sum_prev_detail_key: 'Vendor details',
+    sum_type_key: 'Type',
+    sum_fit_key: 'Shopify fit',
+    sum_design_key: 'Design',
+    sum_goal_key: 'Business goal',
+    sum_budget_stance_key: 'Budget position',
+    sum_budget_range_key: 'Range',
+    sum_deadline_key: 'Deadline',
+    sum_model_key: 'Model',
+    exp_sales_header: 'SALES QUALIFICATION SUMMARY',
+    exp_pm_header: 'PM PROJECT QUALIFICATION BRIEF',
+    exp_date: 'Date',
+    exp_decision: 'Decision',
+    exp_client: 'CLIENT',
+    exp_project: 'PROJECT',
+    exp_budget: 'BUDGET & TIMELINE',
+    exp_design: 'DESIGN',
+    exp_func: 'FUNCTIONALITY',
+    exp_integrations: 'INTEGRATIONS',
+    exp_timeline: 'TIMELINE',
+    exp_notes: 'NOTES',
+    exp_assumptions: 'ASSUMPTIONS',
+    exp_risks: 'RISK LIST',
+    exp_clarify: 'NEEDS CLARIFICATION',
+    exp_nogo: 'NO-GO REASONS',
+    exp_footer_sales: '[Grodas · Shopify Stores Presale · Sales]',
+    exp_footer_pm: '[Grodas · Shopify Stores Presale · PM]',
+    dec_go: '✅ GO — hand off to PM',
+    dec_clarify: '⚡ CLARIFY FIRST — open questions remain',
+    dec_nogo_pfx: '🚫 NO-GO — ',
+    pm_prefill_eyebrow: 'PM · Start',
+    pm_prefill_title: 'Sales data',
+    pm_prefill_hint: 'Paste Sales summary or any text about the client. Claude will fill in the fields automatically — or start filling in manually.',
+    pm_ai_label: '✦ AI autofill',
+    pm_ai_badge: 'recommended',
+    pm_ai_key_ph: 'Anthropic API Key (sk-ant-...)',
+    pm_ai_key_show: 'Show',
+    pm_ai_key_hide: 'Hide',
+    pm_ai_text_ph: 'Paste Sales summary or any free text about the client and project...',
+    pm_ai_btn: '✦ Analyze →',
+    pm_ai_loading: '⏳ Analyzing...',
+    pm_ai_done: '✓ Filled in',
+    pm_ai_note: 'Key is not stored. Requests go directly to api.anthropic.com.',
+    pm_manual_btn: 'Fill in manually →',
+    pm_manual_sep: '— or continue without AI —',
+    pm_type_eyebrow: 'PM · step 1 of 7',
+    pm_type_title: 'Project type',
+    pm_type_hint: 'Determines the structure of subsequent questions.',
+    pm_type_q: 'Project type',
+    pm_type_opts: [
+      {id:'new',label:'🆕 New store from scratch'},
+      {id:'redesign',label:'🎨 Redesign / update of existing Shopify store'},
+      {id:'migration',label:'🔄 Migration from another platform'},
+      {id:'features',label:'⚙️ Adding features to existing store'},
+      {id:'integration',label:'🔗 External system integration'},
+      {id:'support',label:'🛠 Ongoing support / retainer'},
+    ],
+    pm_plan_q: 'Shopify plan',
+    pm_plan_hint: 'Determines available features: Checkout extensibility, B2B, Scripts — Plus only',
+    pm_plan_opts: [
+      {id:'basic',label:'Basic / Grow'},
+      {id:'advanced',label:'Advanced'},
+      {id:'plus',label:'Shopify Plus',info:'Available: Checkout extensibility, native B2B, Shopify Flow, higher API rate limit'},
+      {id:'unknown',label:'Unknown — to clarify'},
+    ],
+    pm_source_q: 'Which platform are we migrating from?',
+    pm_source_opts: [
+      {id:'woo',label:'WooCommerce'},
+      {id:'magento',label:'Magento / Adobe Commerce'},
+      {id:'bigcommerce',label:'BigCommerce'},
+      {id:'wix',label:'Wix / Squarespace'},
+      {id:'custom',label:'Custom platform'},
+      {id:'other',label:'Other'},
+    ],
+    pm_source_other_ph: 'Name of current platform',
+    pm_access_q: 'Access to current store?',
+    pm_access_opts: [
+      {id:'owner',label:'Account owner'},
+      {id:'full',label:'Full access'},
+      {id:'partial',label:'Partial access',note:'Clarify what is inaccessible — may block work'},
+      {id:'no',label:'Not yet — will grant after project start'},
+    ],
+    pm_biz_eyebrow: 'PM · step 2 of 7',
+    pm_biz_title: 'Business & product',
+    pm_biz_hint: 'Understanding context for architectural decisions.',
+    pm_company_ph: 'Acme Store',
+    pm_sell_q: 'What does the client sell?',
+    pm_sell_opts: [
+      {id:'physical',label:'Physical goods'},
+      {id:'digital',label:'Digital goods / files'},
+      {id:'services',label:'Services'},
+      {id:'mix',label:'Mix'},
+    ],
+    pm_sku_q: 'Number of SKUs in catalog',
+    pm_sku_hint: 'Affects filter architecture and search load',
+    pm_sku_opts: [
+      {id:'small',label:'Up to 50'},
+      {id:'med',label:'50 – 500'},
+      {id:'large',label:'500 – 2,000'},
+      {id:'xlarge',label:'Over 2,000',note:'Large catalog — clarify search, filter, and performance requirements'},
+    ],
+    pm_markets_q: 'Sales markets',
+    pm_markets_hint: 'Affects languages, currencies, payment providers, and Shopify Markets',
+    pm_markets_opts: ['Ukraine','Poland / Czech Republic / Slovakia','Rest of Europe','USA / Canada','Global'],
+    pm_markets_note: 'ℹ️ Multi-market — clarify if Shopify Markets or separate stores are needed per region',
+    pm_goal_q: 'Project business goal',
+    pm_goal_hint: 'What specifically should change in the business',
+    pm_goal_ph: 'Replace Magento, enter EU market, improve conversion...',
+    pm_migrate_q: 'What needs to be migrated?',
+    pm_migrate_opts: [
+      {id:'products',label:'Products and variants'},
+      {id:'customers',label:'Customer accounts'},
+      {id:'orders',label:'Order history'},
+      {id:'content',label:'Content (blog, pages)'},
+      {id:'seo',label:'SEO — URL structure, redirects',note:'Critical: without redirects — organic traffic loss'},
+    ],
+    pm_export_q: 'Is it possible to get a data export from the current platform?',
+    pm_export_opts: [
+      {id:'yes',label:'Yes, full access'},
+      {id:'partial',label:'Partial — some data unavailable'},
+      {id:'no',label:'No — depends on vendor',note:'Risk: vendor may limit or delay the export'},
+    ],
+    pm_tech_eyebrow: 'PM · step 3 of 7',
+    pm_tech_title: 'Technical context',
+    pm_tech_hint: 'Clarifying details based on project type.',
+    pm_theme_q: 'Which theme is planned?',
+    pm_theme_opts: [
+      {id:'dawn',label:'Shopify Dawn (free)'},
+      {id:'premium',label:'Premium theme (purchased)'},
+      {id:'custom',label:'Custom theme from scratch',note:'Significantly higher budget and timeline'},
+      {id:'tbd',label:'Not decided yet'},
+    ],
+    pm_existing_site_q: 'Is there an existing site or link?',
+    pm_existing_site_opts: [
+      {id:'yes',label:'Yes'},
+      {id:'no',label:'No — starting from scratch'},
+    ],
+    pm_shopify_access_q: 'Does the client already have a Shopify account?',
+    pm_shopify_access_opts: [
+      {id:'yes',label:'Yes, already exists'},
+      {id:'client_creates',label:'Client will create and invite us'},
+      {id:'agency_creates',label:'Agency creates a Development Store'},
+    ],
+    pm_current_theme_q: 'What is the current theme?',
+    pm_current_theme_hint: 'Name, version, source — affects customization scope',
+    pm_current_theme_ph: 'e.g. Dawn 10.x, or custom from agency X',
+    pm_theme_type_q: 'Is the theme purchased or custom?',
+    pm_theme_type_opts: [
+      {id:'free',label:'Free Shopify theme'},
+      {id:'premium',label:'Premium (purchased)'},
+      {id:'custom',label:'Custom development',note:'Custom theme without documentation — risk of unexpected costs for understanding the architecture'},
+    ],
+    pm_checkout_q: 'Do changes touch Checkout or Cart?',
+    pm_checkout_hint: 'Checkout extensibility — Shopify Plus only',
+    pm_checkout_opts: [
+      {id:'no',label:'No'},
+      {id:'cart',label:'Cart only'},
+      {id:'checkout',label:'Checkout',note:'Checkout extensibility is available only on Shopify Plus'},
+    ],
+    pm_integration_sys_q: 'Which system needs to be integrated?',
+    pm_integration_sys_hint: 'Name and version — critical for estimation',
+    pm_integration_sys_ph: 'System name, version',
+    pm_integration_app_q: 'Is there a ready Shopify App for this system?',
+    pm_integration_app_opts: [
+      {id:'yes',label:'Yes, ready App available',info:'Ready App = lower dev budget, but ongoing subscription cost'},
+      {id:'no',label:'No — custom integration needed'},
+      {id:'partial',label:'App exists but does not cover all needs'},
+    ],
+    pm_api_docs_q: 'Is API documentation available?',
+    pm_api_docs_opts: [
+      {id:'yes',label:'Yes, full documentation'},
+      {id:'partial',label:'Partial'},
+      {id:'no',label:'None',note:'Risk: without documentation, integration estimation is impossible'},
+    ],
+    pm_sync_q: 'Sync frequency?',
+    pm_sync_opts: [
+      {id:'realtime',label:'Real-time / webhook',note:'Real-time sync significantly increases architectural complexity and budget'},
+      {id:'scheduled',label:'Scheduled (batch)'},
+      {id:'manual',label:'Manual or event-driven'},
+      {id:'tbd',label:'Not decided'},
+    ],
+    pm_support_scope_q: 'What is included in the support scope?',
+    pm_support_opts: [
+      {id:'bugs',label:'Bug fixes'},
+      {id:'features',label:'New features'},
+      {id:'content',label:'Content and updates'},
+      {id:'performance',label:'Performance'},
+      {id:'all',label:'Everything',note:'Without a defined scope, support becomes unlimited development — risk'},
+    ],
+    pm_sla_q: 'SLA expectations?',
+    pm_sla_opts: [
+      {id:'4h',label:'Response within 4 hours'},
+      {id:'24h',label:'Response within 24 hours'},
+      {id:'48h',label:'Response within 48 hours'},
+      {id:'tbd',label:'Not decided'},
+    ],
+    pm_retainer_q: 'Expected hours per month?',
+    pm_retainer_opts: [
+      {id:'s10',label:'Up to 10 hrs'},
+      {id:'s20',label:'10 – 20 hrs'},
+      {id:'s40',label:'20 – 40 hrs'},
+      {id:'smore',label:'40+ hrs'},
+      {id:'tbd',label:'Not decided'},
+    ],
+    pm_perf_q: 'Are there Core Web Vitals / PageSpeed requirements?',
+    pm_perf_opts: [
+      {id:'critical',label:'Yes, specific metrics required'},
+      {id:'preferred',label:'Preferred — but not a blocker'},
+      {id:'no',label:'No requirements'},
+    ],
+    pm_design_eyebrow: 'PM · step 4 of 7',
+    pm_design_title: 'Design & brand',
+    pm_design_hint: 'Design readiness directly affects scope and development start.',
+    pm_brand_q: 'Brand materials available?',
+    pm_brand_opts: [
+      {id:'full',label:'Full brand book or brand guidelines'},
+      {id:'partial',label:'Partial — logo, colors without guidelines'},
+      {id:'none_theme',label:'None — want a ready theme without customization'},
+      {id:'none_develop',label:'None — brand development needed',note:'Brand development is a separate scope and significantly increases budget and timeline'},
+    ],
+    pm_figma_q: 'Is there a ready design in Figma or equivalent?',
+    pm_figma_opts: [
+      {id:'full',label:'Yes, approved design for all pages'},
+      {id:'partial',label:'Partial — key pages only'},
+      {id:'wireframes',label:'Wireframes without design'},
+      {id:'no',label:'No — design needs to be developed'},
+    ],
+    pm_figma_warn: '⚠️ Missing or incomplete design — risk of delayed development start. Record in Assumptions.',
+    pm_photos_q: 'Product photos?',
+    pm_photos_opts: [
+      {id:'ready',label:'Ready high-quality photos available'},
+      {id:'partial',label:'Partial'},
+      {id:'no',label:'None — will be prepared',note:'Clarify timeline and format — may delay store population'},
+    ],
+    pm_refs_q: 'Design references',
+    pm_refs_hint: 'Ask for links right now',
+    pm_refs_ph: 'https://... or store name (ask to share in chat)',
+    pm_content_q: 'Who is responsible for content?',
+    pm_content_hint: 'Texts, descriptions, banners',
+    pm_content_opts: [
+      {id:'client',label:"Client's team"},
+      {id:'agency',label:'Agency'},
+      {id:'together',label:'Together'},
+      {id:'tbd',label:'Not decided',note:'Without clear ownership — delays in store population'},
+    ],
+    pm_approver_q: 'Who approves design on the client side?',
+    pm_approver_ph: 'Name, role',
+    pm_func_eyebrow: 'PM · step 5 of 7',
+    pm_func_title: 'Functionality',
+    pm_func_hint: 'Non-standard functionality = custom development or additional apps.',
+    pm_discounts_q: 'Discounts and promotions',
+    pm_discounts_hint: 'Native: %, fixed amount, free shipping, promo codes, buy X get Y',
+    pm_discounts_opts: [
+      {id:'standard',label:'Standard Shopify is sufficient'},
+      {id:'complex',label:'Complex logic — tiered prices, conditional bundles',note:'Requires Shopify Functions or third-party apps'},
+    ],
+    pm_accounts_q: 'Customer account',
+    pm_accounts_opts: [
+      {id:'none',label:'Not needed'},
+      {id:'standard',label:'Standard — login, orders, addresses'},
+      {id:'extended',label:'Extended — wishlist, loyalty, bonuses',note:'Requires third-party apps: Smile.io, LoyaltyLion, etc.'},
+    ],
+    pm_subs_q: 'Subscriptions / recurring orders',
+    pm_subs_opts: [
+      {id:'no',label:'Not needed'},
+      {id:'yes',label:'Yes — subscriptions needed',note:'Shopify has no native subscriptions. Separate app needed: Recharge, Seal Subscriptions, etc.'},
+    ],
+    pm_b2b_q: 'B2B functionality',
+    pm_b2b_opts: [
+      {id:'no',label:'Not needed'},
+      {id:'basic',label:'Basic — separate price lists via app'},
+      {id:'full',label:'Full native B2B',note:'Native B2B available only on Shopify Plus'},
+    ],
+    pm_config_q: 'Product configurator',
+    pm_config_opts: [
+      {id:'no',label:'Not needed'},
+      {id:'simple',label:'Simple options — text field, variant selection (native Shopify)'},
+      {id:'complex',label:'Complex configurator or conditional options',note:'Requires specialized app or custom development'},
+    ],
+    pm_multilang_q: 'Multi-language?',
+    pm_multilang_opts: [
+      {id:'no',label:'No — single language'},
+      {id:'yes_markets',label:'Yes — via Shopify Markets / Translate & Adapt'},
+      {id:'yes_apps',label:'Yes — via third-party app (Langify, Weglot)'},
+      {id:'tbd',label:'Needs clarification'},
+    ],
+    pm_custom_pages_q: 'Non-standard pages or sections',
+    pm_custom_pages_hint: 'Describe what is not covered by standard Shopify blocks',
+    pm_custom_pages_ph: 'e.g. custom lookbook, complex PDP with 3D viewer, interactive size guide...',
+    pm_int_eyebrow: 'PM · step 6 of 7',
+    pm_int_title: 'Integrations',
+    pm_int_hint: 'Before custom development, always check: is there a ready Shopify App?',
+    pm_erp_q: 'CRM or ERP',
+    pm_erp_hint: 'Clarify specific name — critical for estimation',
+    pm_erp_ph: 'System name or "none"',
+    pm_accounting_q: 'Accounting or warehouse system',
+    pm_accounting_ph: 'System name or "none"',
+    pm_email_q: 'Email marketing / SMS',
+    pm_email_opts: [
+      'Klaviyo','Mailchimp','eSputnik','SendPulse',
+      {id:'other_email',label:'Other service'},
+      {id:'none_email',label:'Not used'},
+    ],
+    pm_email_other_q: 'Service name',
+    pm_email_other_ph: 'Email / SMS service name',
+    pm_shipping_q: 'Shipping carriers',
+    pm_payments_q: 'Payment systems',
+    pm_payments_hint: 'Each payment provider is a separate integration',
+    pm_analytics_q: 'Analytics & tracking',
+    pm_analytics_opts: [
+      'Google Analytics 4','Meta Pixel','TikTok Pixel','Google Ads',
+      {id:'other_analytics',label:'Other'},{id:'none_analytics',label:'Not needed'},
+    ],
+    pm_analytics_other_q: 'Which analytics?',
+    pm_analytics_other_ph: 'Tool name',
+    pm_existing_apps_q: 'Any Shopify apps already installed?',
+    pm_existing_apps_ph: 'App names or "none"',
+    pm_other_int_q: 'Other systems or integrations',
+    pm_other_int_ph: 'Anything else that needs to be connected...',
+    pm_timeline_eyebrow: 'PM · step 7 of 7',
+    pm_timeline_title: 'Timeline & team',
+    pm_timeline_hint: 'Finalizing the package for Delivery.',
+    pm_dl_q: 'Is there a hard deadline?',
+    pm_dl_opts: [
+      {id:'no',label:'No hard deadline'},
+      {id:'yes',label:'Yes, specific date or event'},
+    ],
+    pm_dl_date_q: 'Date or description',
+    pm_dl_date_ph: '"by September 1", "Black Friday", "Q4 2025"',
+    pm_dl_flex_q: 'Is there flexibility?',
+    pm_dl_flex_opts: [
+      {id:'flex',label:'Yes, some flexibility'},
+      {id:'no',label:'No, strict',note:'Record as a risk in the estimation'},
+    ],
+    pm_dm_q: "Client's decision-maker",
+    pm_dm_hint: 'Who signs off and approves decisions',
+    pm_dm_ph: 'Name, title',
+    pm_contact_q: 'Main project contact',
+    pm_contact_hint: 'Who answers questions and provides feedback',
+    pm_contact_ph: 'Name, messenger or email',
+    pm_tech_contact_q: 'Is there a technical representative on the client side?',
+    pm_tech_contact_opts: [
+      {id:'yes',label:'Yes, dev or IT manager present'},
+      {id:'no',label:'No, business side only',note:'Without a technical representative — slows down technical communication'},
+    ],
+    pm_content_filler_q: 'Who populates the store with products?',
+    pm_content_filler_opts: [
+      {id:'client',label:"Client's team"},
+      {id:'agency',label:'Agency'},
+      {id:'together',label:'Together'},
+      {id:'tbd',label:'Not decided'},
+    ],
+    pm_post_launch_q: 'Is post-launch support planned?',
+    pm_post_launch_opts: [
+      {id:'no',label:'No — one-time project'},
+      {id:'minimal',label:'Ad-hoc fixes on request'},
+      {id:'retainer',label:'Ongoing retainer',info:'Scope and SLA details agreed after main project completion'},
+    ],
+    pm_testing_q: 'Is there a testing resource on the client side?',
+    pm_testing_hint: 'UAT — someone to verify orders, payments, forms',
+    pm_testing_opts: [
+      {id:'yes',label:'Yes, a person is available'},
+      {id:'no',label:'No — testing fully on the agency'},
+    ],
+    pm_notes_q: 'Call notes',
+    pm_notes_hint: 'Everything important to record for Delivery',
+    pm_notes_ph: 'Client specifics, risks, important context...',
+    pm_summary_eyebrow: 'PM Brief · Summary',
+    pm_summary_badge: '📐 PM Delivery Brief',
+    pm_sum_project: 'Project',
+    pm_sum_design: 'Design',
+    pm_sum_func: 'Functionality',
+    pm_sum_integrations: 'Integrations',
+    pm_sum_timeline: 'Timeline & team',
+    pm_sum_assumptions: 'Assumptions',
+    pm_sum_risks: 'Risk List',
+    pm_sum_notes: 'Notes',
+    pm_key_type: 'Type',
+    pm_key_plan: 'Shopify plan',
+    pm_key_sku: 'Catalog',
+    pm_key_goal: 'Business goal',
+    pm_key_markets: 'Markets',
+    pm_key_theme: 'Theme',
+    pm_key_cur_theme: 'Current theme',
+    pm_key_brand: 'Brand',
+    pm_key_figma: 'Figma',
+    pm_key_refs: 'References',
+    pm_key_content: 'Content',
+    pm_key_discounts: 'Discounts',
+    pm_key_accounts: 'Account',
+    pm_key_subs: 'Subscriptions',
+    pm_key_b2b: 'B2B',
+    pm_key_multilang: 'Multi-language',
+    pm_key_erp: 'ERP/CRM',
+    pm_key_accounting: 'Accounting',
+    pm_key_email: 'Email',
+    pm_key_payments: 'Payments',
+    pm_key_shipping: 'Shipping',
+    pm_key_deadline: 'Deadline',
+    pm_key_dm: 'DM',
+    pm_key_contact: 'Contact',
+    pm_key_postlaunch: 'Post-launch',
+    pm_no_deadline: 'No hard deadline',
+    risk_figma: 'No approved design — risk of delayed development start',
+    risk_export: 'No access to migration data — depends on vendor',
+    risk_seo: 'SEO migration: without proper redirects — organic traffic loss',
+    risk_checkout: 'Checkout extensibility requires Shopify Plus — client plan needs clarification',
+    risk_b2b: 'Native B2B available only on Shopify Plus',
+    risk_content: 'Content responsibility not defined — risk of delays',
+    risk_api: 'API documentation missing — integration estimation is impossible',
+    risk_realtime: 'Real-time sync — significantly higher architectural complexity',
+    risk_custom_int: 'No ready App — custom integration development required',
+    risk_xlarge: 'Large catalog — clarify search, filter, and performance requirements',
+    risk_theme: 'Custom theme without documentation — risk of unexpected costs',
+    ass_type_pfx: 'Project type: ',
+    ass_plan_pfx: 'Shopify plan: ',
+    ass_sku_pfx: 'Catalog size: ',
+    ass_sku_sfx: ' SKUs',
+    ass_figma_ok: 'Approved Figma design available — development can start',
+    ass_figma_no: 'Design not confirmed — estimation based on requirements description',
+    ass_migration: 'Migration data available — audit conducted before development starts',
+    ass_not_set: 'not set',
+  }
+};
+
+function t(key){ return (LANG[lang]||LANG.ua)[key] || key; }
+
+function toggleLang(){
+  lang = lang==='ua' ? 'en' : 'ua';
+  sessionStorage.setItem('grodas_lang', lang);
+  document.getElementById('btnLang').textContent = lang==='ua' ? 'EN' : 'UA';
+  document.getElementById('pwdSubText').textContent = t('pwd_sub');
+  document.getElementById('pwdBtnText').textContent = t('pwd_btn');
+  document.getElementById('btnHomeLabel').textContent = t('btn_home');
+  document.getElementById('btnBackLabel').textContent = t('btn_back');
+  document.getElementById('btnHome2Label').textContent = t('btn_home_main');
+  render();
+}
+
+// ═══════════════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════════════
-let mode = 'home'; // 'home' | 'sales' | 'pm'
+let mode = 'home';
 let A = {};
 let stepIdx = 0;
 
 const SALES_STEPS = ['client','project','budget','decision','summary'];
 const PM_STEPS    = ['pm_prefill','pm_type','pm_business','pm_tech','pm_design','pm_func','pm_integrations','pm_timeline','pm_summary'];
 
-const SALES_NAMES = {client:'Клієнт',project:'Проект і scope',budget:'Бюджет і терміни',decision:'Рішення',summary:'Summary'};
-const PM_NAMES    = {pm_prefill:'Дані від Sales',pm_type:'Тип проекту',pm_business:'Бізнес',pm_tech:'Технічний контекст',pm_design:'Дизайн',pm_func:'Функціональність',pm_integrations:'Інтеграції',pm_timeline:'Терміни і команда',pm_summary:'Summary'};
-
 function steps(){ return mode==='sales'?SALES_STEPS:PM_STEPS; }
 function sid(){ return steps()[stepIdx]; }
-function stepName(s){ return mode==='sales'?SALES_NAMES[s]:PM_NAMES[s]; }
+function stepName(s){
+  const names = mode==='sales' ? t('steps_sales') : t('steps_pm');
+  return names[s] || s;
+}
 
 // ═══════════════════════════════════════════════════════════════════
 // HELPERS
@@ -262,7 +1448,6 @@ function rpills(k,opts){
 function qnp(title,hint,content){
   return `<div class="qn"><p class="qn-title">${title}</p>${hint?`<p class="qn-hint">${hint}</p>`:''}<div class="opts-pills">${content}</div></div>`;
 }
-
 function multi(k,opts){
   const arr=A[k]||[];
   return opts.map(o=>{
@@ -271,24 +1456,20 @@ function multi(k,opts){
       <span class="chk">${sel?'✓':''}</span>${label}</div>`;
   }).join('');
 }
-
 function tf(k,ph,rows){
   const v=(A[k]||'').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   if(rows) return `<textarea class="tf" rows="${rows}" placeholder="${ph}" oninput="save('${k}',this.value)">${A[k]||''}</textarea>`;
   return `<input class="tf" placeholder="${ph}" value="${v}" oninput="save('${k}',this.value)">`;
 }
-
 function qn(title,hint,content){
   return `<div class="qn"><p class="qn-title">${title}</p>${hint?`<p class="qn-hint">${hint}</p>`:''}<div class="opts">${content}</div></div>`;
 }
-
 function sr(label,key){
   const v=A[key];
   if(!v||(Array.isArray(v)&&v.length===0)) return '';
   const d=Array.isArray(v)?v.join(', '):v;
   return `<div class="sum-row"><span class="sum-key">${label}</span><span class="sum-val">${d}</span></div>`;
 }
-
 function sblock(icon,title,rows){
   if(!rows.trim()) return '';
   return `<div class="s-block"><div class="s-block-head"><span class="s-icon">${icon}</span><span class="s-title">${title}</span></div>${rows}</div>`;
@@ -298,32 +1479,25 @@ function sblock(icon,title,rows){
 // WELCOME
 // ═══════════════════════════════════════════════════════════════════
 function stepHome(){
+  const sp=t('sales_pills'), pp=t('pm_pills');
   return `
-    <p style="font-size:10px;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Grodas · Shopify Stores Presale</p>
-    <h2 class="welcome-title">Вибери роль</h2>
-    <p class="welcome-sub">Інструмент для кваліфікації клієнтів і проектів на етапі Presale компанії Grodas. Стосується Shopify магазинів. Обери опитувальник відповідно до своєї ролі і заповни його після контакту з клієнтом. Скопіюй результат і встав в Jira.</p>
+    <p style="font-size:10px;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">${t('welcome_eyebrow')}</p>
+    <h2 class="welcome-title">${t('welcome_title')}</h2>
+    <p class="welcome-sub">${t('welcome_sub')}</p>
     <div class="role-cards">
       <div class="role-card" onclick="startMode('sales')">
         <span class="role-card-icon">🎯</span>
-        <div class="role-card-title">Sales Team</div>
-        <div class="role-card-desc">Кваліфікація клієнта. Заповнюй під час або після першого контакту.</div>
-        <div class="role-card-pills">
-          <span class="role-pill">5 кроків</span>
-          <span class="role-pill">GO / NO-GO</span>
-          <span class="role-pill">~7 хв</span>
-        </div>
-        <button class="role-card-btn">Sales кваліфікація →</button>
+        <div class="role-card-title">${t('sales_title')}</div>
+        <div class="role-card-desc">${t('sales_desc')}</div>
+        <div class="role-card-pills">${sp.map(p=>`<span class="role-pill">${p}</span>`).join('')}</div>
+        <button class="role-card-btn">${t('sales_btn')}</button>
       </div>
       <div class="role-card" onclick="startMode('pm')">
         <span class="role-card-icon">📐</span>
-        <div class="role-card-title">Delivery Team</div>
-        <div class="role-card-desc">Кваліфікація проекту. Вклей дані від Sales і рухайся вглиб.</div>
-        <div class="role-card-pills">
-          <span class="role-pill">8 кроків</span>
-          <span class="role-pill">Delivery brief</span>
-          <span class="role-pill">~15 хв</span>
-        </div>
-        <button class="role-card-btn">PM кваліфікація →</button>
+        <div class="role-card-title">${t('pm_title')}</div>
+        <div class="role-card-desc">${t('pm_desc')}</div>
+        <div class="role-card-pills">${pp.map(p=>`<span class="role-pill">${p}</span>`).join('')}</div>
+        <button class="role-card-btn">${t('pm_btn')}</button>
       </div>
     </div>`;
 }
@@ -333,7 +1507,6 @@ function startMode(m){
   document.getElementById('btnHome').style.display='';
   render();
 }
-
 function goHome(){
   mode='home'; A={}; stepIdx=0;
   document.getElementById('btnHome').style.display='none';
@@ -345,122 +1518,63 @@ function goHome(){
 // ═══════════════════════════════════════════════════════════════════
 function stepSalesClient(){
   return `
-    <p class="step-eyebrow">Sales · крок 1 з 4</p>
-    <h3 class="step-title">Клієнт і контекст</h3>
-    <p class="step-hint">Хто клієнт, звідки прийшов, хто приймає рішення.</p>
-    ${qn('Назва компанії або проекту','',tf('companyName','Acme Fashion / Project Aurora'))}
-    ${qn('Джерело ліда','',radio('leadSource',[
-      {id:'referral',label:'Рекомендація'},
-      {id:'inbound',label:'Inbound — сайт, соцмережі'},
-      {id:'outreach',label:'Outreach'},
-      {id:'agency',label:'Через агентство-посередника',note:'Уточни: хто кінцевий клієнт і чи є прямий контакт з DM'},
-      {id:'repeat',label:'Повторний клієнт'},
-      {id:'other',label:'Інше'},
-    ]))}
-    ${A.leadSource==='other'?`<div class="indent">${qn('Уточни джерело','',tf('leadSourceOther','Опишіть звідки прийшов клієнт'))}</div>`:''}
-    ${qnp('Decision-maker','Хто фінально підписує контракт і запускає проект',rpills('dmStatus',[
-      {id:'yes',label:'Доступний, спілкуємось напряму'},
-      {id:'proxy',label:'Через посередника — DM ще не залучений',note:'Домовся підключити DM до наступного контакту до передачі в Delivery'},
-      {id:'no',label:'Недоступний або невідомий',stop:'NO-GO: без DM рухатись далі неможливо'},
-    ]))}
-    ${A.dmStatus&&A.dmStatus!=='no'?`<div class="indent">${qn('Ім\'я і роль DM','',tf('dmName','Maria — Founder, John — CEO'))}</div>`:''}
-    ${qnp('Попередні підрядники','',rpills('prevVendor',[
-      {id:'no',label:'Ні, перший підрядник'},
-      {id:'yes',label:'Так, є попередній підрядник',note:'Уточни чому розстались і які проблеми були — це ризик'},
-      {id:'unknown',label:'Невідомо'},
-    ]))}
-    ${A.prevVendor==='yes'?`<div class="indent">${qn('Чому розстались / які були проблеми?','Фіксуй навіть якщо розмито — це важливий контекст для Delivery',tf('prevVendorDetails','Наприклад: повільна розробка, погана комунікація, не вклалися в терміни...',2))}</div>`:''}`;
+    <p class="step-eyebrow">${t('s1_eyebrow')}</p>
+    <h3 class="step-title">${t('s1_title')}</h3>
+    <p class="step-hint">${t('s1_hint')}</p>
+    ${qn(t('s1_company'),'',tf('companyName','Acme Fashion / Project Aurora'))}
+    ${qn(t('s1_source'),'',radio('leadSource',t('s1_source_opts')))}
+    ${A.leadSource==='other'?`<div class="indent">${qn(t('s1_source_other_q'),'',tf('leadSourceOther',t('s1_source_other_ph')))}</div>`:''}
+    ${qnp(t('s1_dm'),t('s1_dm_hint'),rpills('dmStatus',t('s1_dm_opts')))}
+    ${A.dmStatus&&A.dmStatus!=='no'?`<div class="indent">${qn(t('s1_dm_name'),'',tf('dmName',t('s1_dm_name_ph')))}</div>`:''}
+    ${qnp(t('s1_prev'),'',rpills('prevVendor',t('s1_prev_opts')))}
+    ${A.prevVendor==='yes'?`<div class="indent">${qn(t('s1_prev_why'),t('s1_prev_why_hint'),tf('prevVendorDetails',t('s1_prev_why_ph'),2))}</div>`:''}`;
 }
 
 function stepSalesProject(){
   return `
-    <p class="step-eyebrow">Sales · крок 2 з 4</p>
-    <h3 class="step-title">Проект і scope</h3>
-    <p class="step-hint">Що саме потрібно і чи Shopify підходить.</p>
-    ${qn('Тип проекту','Визначає маршрут в Delivery',radio('projectType',[
-      {id:'new',label:'🆕 Новий магазин з нуля'},
-      {id:'redesign',label:'🎨 Редизайн або оновлення існуючого'},
-      {id:'migration',label:'🔄 Міграція з іншої платформи'},
-      {id:'features',label:'⚙️ Додавання функціоналу'},
-      {id:'integration',label:'🔗 Інтеграція з зовнішньою системою'},
-      {id:'support',label:'🛠 Ongoing підтримка / retainer'},
-    ]))}
-    ${qn('Бізнес-мета','Не "хочемо магазин" — а що зміниться в бізнесі',tf('businessGoal','Вийти на ринок США, підвищити конверсію, замінити Magento...',2))}
-    ${qnp('Shopify підходить для запиту?','',rpills('shopifyFit',[
-      {id:'yes',label:'Так — покриває потреби'},
-      {id:'likely',label:'Ймовірно — треба уточнити на PM'},
-      {id:'no',label:'Ні — вимоги виходять за межі платформи',stop:'NO-GO: Shopify не покриває цей кейс'},
-    ]))}
-    ${qn('Дизайн або референси є?','',radio('designReady',[
-      {id:'full',label:'Є готовий Figma'},
-      {id:'partial',label:'Є брендбук і референси'},
-      {id:'none_theme',label:'Немає — планується готова тема'},
-      {id:'none_needed',label:'Немає — потрібна розробка дизайну',note:'Дизайн з нуля суттєво розширює scope і бюджет'},
-    ]))}
-    ${qnp('Клієнт вимагає гарантій результату?','Зростання продажів, конверсії тощо',rpills('resultsGuarantee',[
-      {id:'no',label:'Ні — розуміє що відповідаємо за якість реалізації'},
-      {id:'yes',label:'Так — хоче гарантії бізнес-результату',note:'Ризик: необхідно прояснити очікування до підписання контракту'},
-    ]))}`;
+    <p class="step-eyebrow">${t('s2_eyebrow')}</p>
+    <h3 class="step-title">${t('s2_title')}</h3>
+    <p class="step-hint">${t('s2_hint')}</p>
+    ${qn(t('s2_type'),t('s2_type_hint'),radio('projectType',t('s2_type_opts')))}
+    ${qn(t('s2_goal'),t('s2_goal_hint'),tf('businessGoal',t('s2_goal_ph'),2))}
+    ${qnp(t('s2_fit'),'',rpills('shopifyFit',t('s2_fit_opts')))}
+    ${qn(t('s2_design'),'',radio('designReady',t('s2_design_opts')))}
+    ${qnp(t('s2_guarantee'),t('s2_guarantee_hint'),rpills('resultsGuarantee',t('s2_guarantee_opts')))}`;
 }
 
 function stepSalesBudget(){
   const hasDL=A.hasDeadline==='yes';
   return `
-    <p class="step-eyebrow">Sales · крок 3 з 4</p>
-    <h3 class="step-title">Бюджет і терміни</h3>
-    <p class="step-hint">Питати прямо і рано. Якщо клієнт ухиляється — запропонуй вилку: «Зазвичай такий проект коштує X–Y. Це ваш діапазон?»</p>
-    ${qn('Позиція клієнта по бюджету','',radio('budgetStance',[
-      {id:'named',label:'Назвав суму або діапазон'},
-      {id:'open',label:'Готовий обговорювати після оцінки'},
-      {id:'unknown',label:'Не визначився — чекає нашу оцінку',note:'Запропонуй діапазони щоб зрозуміти рамки'},
-      {id:'refuses',label:'Відмовляється говорити про бюджет',stop:'NO-GO: без бюджетного контексту оцінка безглузда'},
-    ]))}
-    ${A.budgetStance==='named'?`<div class="indent">${qnp('Діапазон','',rpills('budgetRange',[
-      {id:'u5k',label:'До $5,000'},
-      {id:'5_15k',label:'$5,000 – $15,000'},
-      {id:'15_30k',label:'$15,000 – $30,000'},
-      {id:'30_50k',label:'$30,000 – $50,000'},
-      {id:'50kp',label:'$50,000+'},
-    ]))}</div>`:''}
-    ${qnp('Жорсткий дедлайн?','Сезон, анонс, захід',rpills('hasDeadline',[
-      {id:'no',label:'Ні, без жорстких термінів'},
-      {id:'yes',label:'Так, є конкретна дата або подія'},
-    ]))}
+    <p class="step-eyebrow">${t('s3_eyebrow')}</p>
+    <h3 class="step-title">${t('s3_title')}</h3>
+    <p class="step-hint">${t('s3_hint')}</p>
+    ${qn(t('s3_budget'),'',radio('budgetStance',t('s3_budget_opts')))}
+    ${A.budgetStance==='named'?`<div class="indent">${qnp(lang==='ua'?'Діапазон':'Range','',rpills('budgetRange',t('s3_range_opts')))}</div>`:''}
+    ${qnp(t('s3_deadline'),t('s3_deadline_hint'),rpills('hasDeadline',t('s3_deadline_opts')))}
     ${hasDL?`<div class="indent">
-      ${qn('Дата або опис','',tf('deadlineDate','До 1 вересня, Black Friday, Q4 2025'))}
-      ${qnp('Є гнучкість якщо не вкладемось?','',rpills('deadlineFlex',[
-        {id:'flex',label:'Так, є певна гнучкість'},
-        {id:'no',label:'Ні, дедлайн жорсткий',note:'Перевір реалістичність при поточних ресурсах'},
-      ]))}
+      ${qn(t('s3_deadline_date'),'',tf('deadlineDate',t('s3_deadline_date_ph')))}
+      ${qnp(t('s3_deadline_flex'),'',rpills('deadlineFlex',t('s3_deadline_flex_opts')))}
     </div>`:''}
-    ${qnp('Модель співпраці','',rpills('collabModel',[
-      {id:'fixed',label:'Fixed Price — проект під ключ'},
-      {id:'tm',label:'T&M — оплата за годинами'},
-      {id:'retainer',label:'Retainer — ongoing підтримка'},
-      {id:'tbd',label:'Не визначено'},
-    ]))}
-    ${qnp('Комунікація нормальна?','',rpills('toxicComm',[
-      {id:'no',label:'Так — нормальна ділова комунікація'},
-      {id:'yes',label:'Є проблеми в комунікації',stop:'NO-GO: не починаємо таку співпрацю'},
-    ]))}
-    ${qn('Нотатки','Специфіка клієнта, застереження, важливий контекст',tf('salesNotes','Вільний текст...',3))}`;
+    ${qnp(t('s3_model'),'',rpills('collabModel',t('s3_model_opts')))}
+    ${qnp(t('s3_toxic'),'',rpills('toxicComm',t('s3_toxic_opts')))}
+    ${qn(t('s3_notes'),t('s3_notes_hint'),tf('salesNotes',t('s3_notes_ph'),3))}`;
 }
 
-// ── SALES LOGIC ──────────────────────────────────────────────────
 function getSalesNoGo(){
   const r=[];
-  if(A.dmStatus==='no') r.push('Decision-maker недоступний або невідомий');  if(A.budgetStance==='refuses') r.push('Клієнт відмовляється обговорювати бюджет');
-  if(A.shopifyFit==='no') r.push('Вимоги виходять за межі Shopify');
-  if(A.toxicComm==='yes') r.push('Токсична або неповажна комунікація');
+  if(A.dmStatus==='no') r.push(t('nogo_dm'));
+  if(A.budgetStance==='refuses') r.push(t('nogo_budget'));
+  if(A.shopifyFit==='no') r.push(t('nogo_fit'));
+  if(A.toxicComm==='yes') r.push(t('nogo_comm'));
   return r;
 }
 function getSalesClarify(){
   const r=[];
-  if(!A.projectType) r.push('Тип проекту не визначено');
-  if(!A.businessGoal) r.push('Бізнес-мета не озвучена');
-  if(A.budgetStance==='unknown') r.push('Бюджет — потрібно уточнити діапазон');
-  if(A.dmStatus==='proxy') r.push('Decision-maker не залучений напряму');
-  if(A.resultsGuarantee==='yes') r.push('⚠️ Клієнт очікує гарантій результату — необхідно прояснити очікування до підписання');
+  if(!A.projectType) r.push(t('cl_type'));
+  if(!A.businessGoal) r.push(t('cl_goal'));
+  if(A.budgetStance==='unknown') r.push(t('cl_budget'));
+  if(A.dmStatus==='proxy') r.push(t('cl_dm'));
+  if(A.resultsGuarantee==='yes') r.push(t('cl_guarantee'));
   return r;
 }
 function getSalesDecision(){
@@ -474,74 +1588,74 @@ function stepSalesDecision(){
   let badge='',body='';
   if(dec==='nogo'){
     badge=`<div class="decision-badge badge-nogo">🚫 NO-GO</div>`;
-    body=`<div class="nogo-banner"><strong>Причини зупинки:</strong>${nogo.map(r=>`<div>• ${r}</div>`).join('')}</div>
-    <p style="font-size:13px;color:var(--gray-500);line-height:1.6">Зафіксуй причину в Jira і закрий лід. Або поверніться до клієнта з уточнюючими питаннями.</p>`;
+    body=`<div class="nogo-banner"><strong>${t('nogo_reasons_title')}</strong>${nogo.map(r=>`<div>• ${r}</div>`).join('')}</div>
+    <p style="font-size:13px;color:var(--gray-500);line-height:1.6">${t('nogo_text')}</p>`;
   } else if(dec==='clarify'){
     badge=`<div class="decision-badge badge-clarify">⚡ CLARIFY FIRST</div>`;
-    body=`<p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;line-height:1.6">Перспективний клієнт. Перед передачею в Delivery — закрий ці питання:</p>
+    body=`<p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;line-height:1.6">${t('clarify_text')}</p>
     ${clarify.map(r=>`<div style="padding:5px 0;border-bottom:1px solid var(--gray-100);font-size:13px;color:var(--amber)">? ${r}</div>`).join('')}`;
   } else {
     badge=`<div class="decision-badge badge-go">✅ GO</div>`;
-    body=`<p style="font-size:13px;color:var(--gray-500);line-height:1.6">Клієнт кваліфікований. Передай summary в Jira і сповісти PM — він проведе кваліфікацію проекту.</p>`;
+    body=`<p style="font-size:13px;color:var(--gray-500);line-height:1.6">${t('go_text')}</p>`;
   }
-  return `<p class="step-eyebrow">Sales · крок 4 з 4</p><h3 class="step-title">Рішення</h3><p class="step-hint">На основі заповнених даних.</p>${badge}${body}
-  <div class="divider"></div><p style="font-size:12px;color:var(--gray-400)">Далі — Summary для копіювання в Jira.</p>`;
+  return `<p class="step-eyebrow">${t('s4_eyebrow')}</p><h3 class="step-title">${t('s4_title')}</h3><p class="step-hint">${t('s4_hint')}</p>${badge}${body}
+  <div class="divider"></div><p style="font-size:12px;color:var(--gray-400)">${t('next_summary_hint')}</p>`;
 }
 
 function stepSalesSummary(){
   const dec=getSalesDecision(), nogo=getSalesNoGo(), clarify=getSalesClarify();
-  const decLabel=dec==='go'?'✅ GO — передавати на PM':dec==='clarify'?'⚡ CLARIFY FIRST — є відкриті питання':'🚫 NO-GO — '+nogo[0];
+  const decLabel=dec==='go'?t('dec_go'):dec==='clarify'?t('dec_clarify'):t('dec_nogo_pfx')+nogo[0];
   let badge='';
   if(dec==='go') badge='<div class="decision-badge badge-go">✅ GO</div>';
   else if(dec==='clarify') badge='<div class="decision-badge badge-clarify">⚡ CLARIFY FIRST</div>';
   else badge='<div class="decision-badge badge-nogo">🚫 NO-GO</div>';
 
   const lines=[
-    `SALES QUALIFICATION SUMMARY`,
-    `${'═'.repeat(38)}`,
-    `Дата: ${new Date().toLocaleDateString('uk-UA')}`,
-    `Рішення: ${decLabel}`,
-    ``,
-    `КЛІЄНТ`,
-    A.companyName?`Компанія: ${A.companyName}`:'',
-    A.leadSource?`Джерело: ${A.leadSource}`:'',
-    A.dmName?`DM: ${A.dmName}`:'',
-    A.dmStatus?`DM доступний: ${A.dmStatus}`:'',
-    A.prevVendor?`Попередній підрядник: ${A.prevVendor}`:'',
-    A.prevVendorDetails?`Деталі: ${A.prevVendorDetails}`:'',
-    ``,
-    `ПРОЕКТ`,
-    A.projectType?`Тип: ${A.projectType}`:'',
-    A.businessGoal?`Бізнес-мета: ${A.businessGoal}`:'',
-    A.shopifyFit?`Shopify fit: ${A.shopifyFit}`:'',
-    A.designReady?`Дизайн/Референси: ${A.designReady}`:'',
-    ``,
-    `БЮДЖЕТ І ТЕРМІНИ`,
-    A.budgetStance?`Позиція по бюджету: ${A.budgetStance}`:'',
-    A.budgetRange?`Діапазон: ${A.budgetRange}`:'',
-    A.hasDeadline==='yes'&&A.deadlineDate?`Дедлайн: ${A.deadlineDate}`:'',
-    A.collabModel?`Модель: ${A.collabModel}`:'',
-    A.salesNotes?`\nНОТАТКИ\n${A.salesNotes}`:'',
-    clarify.length?`\nПОТРЕБУЄ УТОЧНЕННЯ\n${clarify.map(r=>'• '+r).join('\n')}`:'',
-    nogo.length?`\nNO-GO ПРИЧИНИ\n${nogo.map(r=>'• '+r).join('\n')}`:'',
-    ``,`${'═'.repeat(38)}`,
-    `[Grodas · Shopify Stores Presale · Sales]`
+    t('exp_sales_header'),
+    '═'.repeat(38),
+    `${t('exp_date')}: ${new Date().toLocaleDateString(lang==='ua'?'uk-UA':'en-US')}`,
+    `${t('exp_decision')}: ${decLabel}`,
+    '',
+    t('exp_client'),
+    A.companyName?`${lang==='ua'?'Компанія':'Company'}: ${A.companyName}`:'',
+    A.leadSource?`${t('sum_source_key')}: ${A.leadSource}`:'',
+    A.dmName?`${t('sum_dm_key')}: ${A.dmName}`:'',
+    A.dmStatus?`${t('sum_dm_status_key')}: ${A.dmStatus}`:'',
+    A.prevVendor?`${t('sum_prev_key')}: ${A.prevVendor}`:'',
+    A.prevVendorDetails?`${lang==='ua'?'Деталі':'Details'}: ${A.prevVendorDetails}`:'',
+    '',
+    t('exp_project'),
+    A.projectType?`${t('sum_type_key')}: ${A.projectType}`:'',
+    A.businessGoal?`${t('sum_goal_key')}: ${A.businessGoal}`:'',
+    A.shopifyFit?`${t('sum_fit_key')}: ${A.shopifyFit}`:'',
+    A.designReady?`${t('sum_design_key')}: ${A.designReady}`:'',
+    '',
+    t('exp_budget'),
+    A.budgetStance?`${t('sum_budget_stance_key')}: ${A.budgetStance}`:'',
+    A.budgetRange?`${t('sum_budget_range_key')}: ${A.budgetRange}`:'',
+    A.hasDeadline==='yes'&&A.deadlineDate?`${t('sum_deadline_key')}: ${A.deadlineDate}`:'',
+    A.collabModel?`${t('sum_model_key')}: ${A.collabModel}`:'',
+    A.salesNotes?`\n${t('exp_notes')}\n${A.salesNotes}`:'',
+    clarify.length?`\n${t('exp_clarify')}\n${clarify.map(r=>'• '+r).join('\n')}`:'',
+    nogo.length?`\n${t('exp_nogo')}\n${nogo.map(r=>'• '+r).join('\n')}`:'',
+    '','═'.repeat(38),
+    t('exp_footer_sales')
   ].filter(l=>l!=='').join('\n').replace(/\n{3,}/g,'\n\n');
 
-  return `<p class="step-eyebrow">Sales Summary</p>
-  <h3 class="step-title">${A.companyName||'Клієнт'}</h3>
+  return `<p class="step-eyebrow">${t('sum_eyebrow')}</p>
+  <h3 class="step-title">${A.companyName||t('sum_client_block')}</h3>
   ${badge}
-  ${sblock('👤','Клієнт',sr('Джерело','leadSource')+sr('Decision-maker','dmName')+sr('DM статус','dmStatus')+sr('Попередній підрядник','prevVendor')+(A.prevVendorDetails?`<div class="sum-row"><span class="sum-key">Деталі підрядника</span><span class="sum-val flag-warn">${A.prevVendorDetails}</span></div>`:''))}
-  ${sblock('📦','Проект',sr('Тип','projectType')+sr('Shopify fit','shopifyFit')+sr('Дизайн','designReady')+(A.businessGoal?`<div class="sum-row"><span class="sum-key">Бізнес-мета</span><span class="sum-val">${A.businessGoal}</span></div>`:''))}
-  ${sblock('💰','Бюджет і терміни',sr('Позиція','budgetStance')+sr('Діапазон','budgetRange')+(A.hasDeadline==='yes'&&A.deadlineDate?`<div class="sum-row"><span class="sum-key">Дедлайн</span><span class="sum-val">${A.deadlineDate}</span></div>`:'')+sr('Модель','collabModel'))}
-  ${clarify.length?sblock('⚡','Потребує уточнення',clarify.map(r=>`<div class="sum-row"><span class="sum-val flag-warn">? ${r}</span></div>`).join('')):''}
-  ${nogo.length?sblock('🚫','NO-GO причини',nogo.map(r=>`<div class="sum-row"><span class="sum-val flag-stop">• ${r}</span></div>`).join('')):''}
-  ${A.salesNotes?sblock('📝','Нотатки',`<div class="sum-row"><span class="sum-val">${A.salesNotes}</span></div>`):''}
+  ${sblock('👤',t('sum_client_block'),sr(t('sum_source_key'),'leadSource')+sr(t('sum_dm_key'),'dmName')+sr(t('sum_dm_status_key'),'dmStatus')+sr(t('sum_prev_key'),'prevVendor')+(A.prevVendorDetails?`<div class="sum-row"><span class="sum-key">${t('sum_prev_detail_key')}</span><span class="sum-val flag-warn">${A.prevVendorDetails}</span></div>`:''))}
+  ${sblock('📦',t('sum_project_block'),sr(t('sum_type_key'),'projectType')+sr(t('sum_fit_key'),'shopifyFit')+sr(t('sum_design_key'),'designReady')+(A.businessGoal?`<div class="sum-row"><span class="sum-key">${t('sum_goal_key')}</span><span class="sum-val">${A.businessGoal}</span></div>`:'')+sr(t('sum_model_key'),'collabModel'))}
+  ${sblock('💰',t('sum_budget_block'),sr(t('sum_budget_stance_key'),'budgetStance')+sr(t('sum_budget_range_key'),'budgetRange')+(A.hasDeadline==='yes'&&A.deadlineDate?`<div class="sum-row"><span class="sum-key">${t('sum_deadline_key')}</span><span class="sum-val">${A.deadlineDate}</span></div>`:''))}
+  ${clarify.length?sblock('⚡',t('sum_clarify_block'),clarify.map(r=>`<div class="sum-row"><span class="sum-val flag-warn">? ${r}</span></div>`).join('')):''}
+  ${nogo.length?sblock('🚫',t('sum_nogo_block'),nogo.map(r=>`<div class="sum-row"><span class="sum-val flag-stop">• ${r}</span></div>`).join('')):''}
+  ${A.salesNotes?sblock('📝',t('sum_notes_block'),`<div class="sum-row"><span class="sum-val">${A.salesNotes}</span></div>`):''}
   <div class="export-area" id="exportArea">${lines}</div>
   <div class="export-actions">
-    <button class="btn-copy" onclick="copyExport()">📋 Копіювати для Jira</button>
-    <button class="btn-new" onclick="goHome()">← На головну</button>
-    <button class="btn-new" onclick="restartFlow()">+ Новий клієнт</button>
+    <button class="btn-copy" onclick="copyExport()">${t('sum_copy_btn')}</button>
+    <button class="btn-new" onclick="goHome()">${t('sum_home_btn')}</button>
+    <button class="btn-new" onclick="restartFlow()">+ ${t('sum_new_sales')}</button>
   </div>`;
 }
 
@@ -550,357 +1664,191 @@ function stepSalesSummary(){
 // ═══════════════════════════════════════════════════════════════════
 function stepPmPrefill(){
   return `
-    <p class="step-eyebrow">PM · Старт</p>
-    <h3 class="step-title">Дані від Sales</h3>
-    <p class="step-hint">Вклей Summary від Sales або будь-який текст про клієнта. Claude заповнить поля автоматично — або починай заповнювати вручну.</p>
+    <p class="step-eyebrow">${t('pm_prefill_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_prefill_title')}</h3>
+    <p class="step-hint">${t('pm_prefill_hint')}</p>
     <div class="ai-block">
-      <div class="ai-label">✦ AI автозаповнення <span class="ai-badge">рекомендовано</span></div>
+      <div class="ai-label">${t('pm_ai_label')} <span class="ai-badge">${t('pm_ai_badge')}</span></div>
       <div style="position:relative;margin-bottom:8px">
-        <input id="apiKey" class="tf" type="password" placeholder="Anthropic API Key (sk-ant-...)">
-        <button onclick="toggleKey()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:11px;color:var(--gray-400);font-family:inherit">Показати</button>
+        <input id="apiKey" class="tf" type="password" placeholder="${t('pm_ai_key_ph')}">
+        <button onclick="toggleKey()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:11px;color:var(--gray-400);font-family:inherit" id="toggleKeyBtn">${t('pm_ai_key_show')}</button>
       </div>
-      <textarea id="prefillText" class="tf" rows="4" placeholder="Вклей Summary від Sales або вільний текст про клієнта і проект..."></textarea>
+      <textarea id="prefillText" class="tf" rows="4" placeholder="${t('pm_ai_text_ph')}"></textarea>
       <div class="ai-row">
-        <button class="ai-btn" id="aiBtn" onclick="autofillPm()">✦ Аналізувати →</button>
+        <button class="ai-btn" id="aiBtn" onclick="autofillPm()">${t('pm_ai_btn')}</button>
         <span class="ai-status" id="aiStatus"></span>
       </div>
-      <p class="ai-note">Ключ не зберігається. Запити йдуть напряму на api.anthropic.com.</p>
+      <p class="ai-note">${t('pm_ai_note')}</p>
     </div>
-    <p style="font-size:12px;color:var(--gray-400);margin-bottom:10px;text-align:center">— або продовжуй без AI —</p>
-    <button class="btn-start" onclick="goNext()" style="width:100%;padding:10px;border-radius:var(--radius-sm);border:none;background:var(--green);color:#fff;font-size:13px;font-family:inherit;font-weight:600;cursor:pointer">Заповнювати вручну →</button>`;
+    <p style="font-size:12px;color:var(--gray-400);margin-bottom:10px;text-align:center">${t('pm_manual_sep')}</p>
+    <button onclick="goNext()" style="width:100%;padding:10px;border-radius:var(--radius-sm);border:none;background:var(--green);color:#fff;font-size:13px;font-family:inherit;font-weight:600;cursor:pointer">${t('pm_manual_btn')}</button>`;
 }
 
 function stepPmType(){
   return `
-    <p class="step-eyebrow">PM · крок 1 з 7</p>
-    <h3 class="step-title">Тип проекту</h3>
-    <p class="step-hint">Від цього залежить структура наступних питань.</p>
-    ${qn('Тип проекту','',radio('pm_projectType',[
-      {id:'new',label:'🆕 Новий магазин з нуля'},
-      {id:'redesign',label:'🎨 Редизайн / оновлення існуючого Shopify'},
-      {id:'migration',label:'🔄 Міграція з іншої платформи'},
-      {id:'features',label:'⚙️ Додавання функціоналу до існуючого'},
-      {id:'integration',label:'🔗 Інтеграція з зовнішньою системою'},
-      {id:'support',label:'🛠 Ongoing підтримка / retainer'},
-    ]))}
-    ${qnp('План Shopify','Визначає доступність функціоналу: Checkout extensibility, B2B, Scripts — лише Plus',rpills('shopifyPlan',[
-      {id:'basic',label:'Basic / Grow'},
-      {id:'advanced',label:'Advanced'},
-      {id:'plus',label:'Shopify Plus',info:'Доступно: Checkout extensibility, нативний B2B, Shopify Flow, вищий API rate limit'},
-      {id:'unknown',label:'Невідомо — уточнити'},
-    ]))}
+    <p class="step-eyebrow">${t('pm_type_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_type_title')}</h3>
+    <p class="step-hint">${t('pm_type_hint')}</p>
+    ${qn(t('pm_type_q'),'',radio('pm_projectType',t('pm_type_opts')))}
+    ${qnp(t('pm_plan_q'),t('pm_plan_hint'),rpills('shopifyPlan',t('pm_plan_opts')))}
     ${A.pm_projectType==='migration'?`<div class="indent">
-      ${qn('З якої платформи мігруємо?','',radio('sourcePlatform',[
-        {id:'woo',label:'WooCommerce'},
-        {id:'magento',label:'Magento / Adobe Commerce'},
-        {id:'bigcommerce',label:'BigCommerce'},
-        {id:'wix',label:'Wix / Squarespace'},
-        {id:'custom',label:'Кастомна платформа'},
-        {id:'other',label:'Інша'},
-      ]))}
-      ${A.sourcePlatform==='other'?qn('Назва платформи','',tf('sourcePlatformOther','Назва поточної платформи')):''}
+      ${qn(t('pm_source_q'),'',radio('sourcePlatform',t('pm_source_opts')))}
+      ${A.sourcePlatform==='other'?qn(lang==='ua'?'Назва платформи':'Platform name','',tf('sourcePlatformOther',t('pm_source_other_ph'))):''}
     </div>`:''}
-    ${(A.pm_projectType==='redesign'||A.pm_projectType==='features')?`<div class="indent">${qnp('Доступ до поточного магазину?','',rpills('adminAccess',[
-      {id:'owner',label:'Власник акаунту'},
-      {id:'full',label:'Повний доступ'},
-      {id:'partial',label:'Частковий доступ',note:'Уточни що саме недоступно — може блокувати роботу'},
-      {id:'no',label:'Поки немає — надасть після старту'},
-    ]))}</div>`:''}`;
+    ${(A.pm_projectType==='redesign'||A.pm_projectType==='features')?`<div class="indent">${qnp(t('pm_access_q'),'',rpills('adminAccess',t('pm_access_opts')))}</div>`:''}`;
 }
 
 function stepPmBusiness(){
   return `
-    <p class="step-eyebrow">PM · крок 2 з 7</p>
-    <h3 class="step-title">Бізнес і продукт</h3>
-    <p class="step-hint">Розуміємо контекст для архітектурних рішень.</p>
-    ${qn('Назва компанії / проекту','',tf('pm_company','Acme Store'))}
-    ${qnp('Що продає клієнт?','',rpills('pm_whatSell',[
-      {id:'physical',label:'Фізичні товари'},
-      {id:'digital',label:'Цифрові товари / файли'},
-      {id:'services',label:'Послуги'},
-      {id:'mix',label:'Мікс'},
-    ]))}
-    ${qnp('Кількість SKU у каталозі','Впливає на архітектуру фільтрів і навантаження на пошук',rpills('pm_skuCount',[
-      {id:'small',label:'До 50'},
-      {id:'med',label:'50 – 500'},
-      {id:'large',label:'500 – 2 000'},
-      {id:'xlarge',label:'Понад 2 000',note:'Великий каталог — уточни вимоги до пошуку, фільтрів і перформансу'},
-    ]))}
-    ${qn('Ринки продажів','Впливає на мови, валюти, платіжки і Shopify Markets',multi('pm_markets',[
-      'Україна','Польща / Чехія / Словаччина','Решта Європи','США / Канада','Глобально',
-    ]))}
-    ${(A.pm_markets||[]).length>1?`<div class="note-info" style="margin-top:-12px;margin-bottom:12px">ℹ️ Мультиринковість — уточни чи потрібен Shopify Markets або окремі магазини для кожного ринку</div>`:''}
-    ${qn('Бізнес-мета проекту','Що конкретно має змінитись в бізнесі',tf('pm_goal','Замінити Magento, вийти на EU ринок, підвищити конверсію...',2))}
+    <p class="step-eyebrow">${t('pm_biz_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_biz_title')}</h3>
+    <p class="step-hint">${t('pm_biz_hint')}</p>
+    ${qn(lang==='ua'?'Назва компанії / проекту':'Company / project name','',tf('pm_company',t('pm_company_ph')))}
+    ${qnp(t('pm_sell_q'),'',rpills('pm_whatSell',t('pm_sell_opts')))}
+    ${qnp(t('pm_sku_q'),t('pm_sku_hint'),rpills('pm_skuCount',t('pm_sku_opts')))}
+    ${qn(t('pm_markets_q'),t('pm_markets_hint'),multi('pm_markets',t('pm_markets_opts')))}
+    ${(A.pm_markets||[]).length>1?`<div class="note-info" style="margin-top:-12px;margin-bottom:12px">${t('pm_markets_note')}</div>`:''}
+    ${qn(t('pm_goal_q'),t('pm_goal_hint'),tf('pm_goal',t('pm_goal_ph'),2))}
     ${A.pm_projectType==='migration'?`
-    ${qn('Що потрібно мігрувати?','',multi('pm_migrateWhat',[
-      {id:'products',label:'Продукти і варіанти'},
-      {id:'customers',label:'Клієнти і акаунти'},
-      {id:'orders',label:'Історія замовлень'},
-      {id:'content',label:'Контент (блог, сторінки)'},
-      {id:'seo',label:'SEO — URL структура, редиректи',note:'Критично: без редиректів — втрата органічного трафіку'},
-    ]))}
-    ${qnp('Є можливість отримати експорт даних з поточної платформи?','',rpills('pm_dataExport',[
-      {id:'yes',label:'Так, є повний доступ'},
-      {id:'partial',label:'Частковий — деяких даних немає'},
-      {id:'no',label:'Ні — залежимо від вендора',note:'Ризик: вендор може обмежити або затримати експорт'},
-    ]))}`:''}`;
+    ${qn(t('pm_migrate_q'),'',multi('pm_migrateWhat',t('pm_migrate_opts')))}
+    ${qnp(t('pm_export_q'),'',rpills('pm_dataExport',t('pm_export_opts')))}`:''}`;
 }
 
 function stepPmTech(){
-  const t=A.pm_projectType;
+  const t2=A.pm_projectType;
   return `
-    <p class="step-eyebrow">PM · крок 3 з 7</p>
-    <h3 class="step-title">Технічний контекст</h3>
-    <p class="step-hint">Уточнюємо деталі по типу проекту.</p>
-    ${t==='new'?`
-    ${qnp('Яка тема планується?','',rpills('pm_theme',[
-      {id:'dawn',label:'Shopify Dawn (безкоштовна)'},
-      {id:'premium',label:'Преміум тема (купована)'},
-      {id:'custom',label:'Кастомна тема з нуля',note:'Суттєво вищий бюджет і терміни'},
-      {id:'tbd',label:'Ще не вирішено'},
-    ]))}
-    ${qnp('Є поточний сайт або посилання на нього?','',rpills('pm_existingSite',[
-      {id:'yes',label:'Так'},
-      {id:'no',label:'Ні — старт з нуля'},
-    ]))}
-    ${qnp('Shopify акаунт вже є?','',rpills('pm_shopifyAccess',[
-      {id:'yes',label:'Так, вже є'},
-      {id:'client_creates',label:'Клієнт створить і запросить'},
-      {id:'agency_creates',label:'Агентство створює Development Store'},
-    ]))}`:''}
-    ${t==='redesign'||t==='features'?`
-    ${qn('Яка поточна тема?','Назва, версія, звідки — впливає на scope кастомізації',tf('pm_currentTheme','Наприклад: Dawn 10.x, або кастомна від агентства X'))}
-    ${qnp('Тема куплена чи кастомна?','',rpills('pm_themeType',[
-      {id:'free',label:'Безкоштовна Shopify тема'},
-      {id:'premium',label:'Преміум (куплена)'},
-      {id:'custom',label:'Кастомна розробка',note:'Кастомна тема без документації — ризик непередбачених витрат на розуміння архітектури'},
-    ]))}
-    ${qnp('Зміни зачіпають Checkout або Cart?','Checkout extensibility — тільки Shopify Plus',rpills('pm_checkoutChanges',[
-      {id:'no',label:'Ні'},
-      {id:'cart',label:'Тільки Cart'},
-      {id:'checkout',label:'Checkout',note:'Checkout extensibility доступний лише на Shopify Plus'},
-    ]))}`:''}
-    ${t==='integration'?`
-    ${qn('Яка система для інтеграції?','Назва і версія — критично для оцінки',tf('pm_integrationSystem','Назва системи, версія'))}
-    ${qnp('Є готовий Shopify App для цієї системи?','',rpills('pm_integrationApp',[
-      {id:'yes',label:'Так, є готовий App',info:'Готовий App = менший бюджет розробки, але ongoing підписка'},
-      {id:'no',label:'Ні — потрібна кастомна інтеграція'},
-      {id:'partial',label:'Є App але не покриває всі потреби'},
-    ]))}
-    ${qnp('API документація доступна?','',rpills('pm_apiDocs',[
-      {id:'yes',label:'Так, є повна документація'},
-      {id:'partial',label:'Часткова'},
-      {id:'no',label:'Немає',note:'Ризик: без документації оцінка інтеграції неможлива'},
-    ]))}
-    ${qnp('Частота синхронізації?','',rpills('pm_syncFreq',[
-      {id:'realtime',label:'Реал-тайм / webhook',note:'Реал-тайм синхронізація суттєво збільшує архітектурну складність і бюджет'},
-      {id:'scheduled',label:'По розкладу (batch)'},
-      {id:'manual',label:'Ручна або подієва'},
-      {id:'tbd',label:'Не визначено'},
-    ]))}`:''}
-    ${t==='support'?`
-    ${qn('Що входить у scope підтримки?','',multi('pm_supportScope',[
-      {id:'bugs',label:'Виправлення багів'},
-      {id:'features',label:'Нові фічі'},
-      {id:'content',label:'Контент і оновлення'},
-      {id:'performance',label:'Перформанс'},
-      {id:'all',label:'Все підряд',note:'Без фіксованого scope підтримка стає безлімітною розробкою — ризик'},
-    ]))}
-    ${qnp('Очікування по SLA?','',rpills('pm_sla',[
-      {id:'4h',label:'Реакція до 4 годин'},
-      {id:'24h',label:'Реакція до 24 годин'},
-      {id:'48h',label:'Реакція до 48 годин'},
-      {id:'tbd',label:'Не визначено'},
-    ]))}
-    ${qnp('Очікуваний обсяг годин / місяць?','',rpills('pm_retainerHours',[
-      {id:'s10',label:'До 10 год'},
-      {id:'s20',label:'10 – 20 год'},
-      {id:'s40',label:'20 – 40 год'},
-      {id:'smore',label:'40+ год'},
-      {id:'tbd',label:'Не визначено'},
-    ]))}`:''}
-    ${qnp('Є вимоги по Core Web Vitals / PageSpeed?','',rpills('pm_performance',[
-      {id:'critical',label:'Так, є конкретні метрики'},
-      {id:'preferred',label:'Бажано — але не блокер'},
-      {id:'no',label:'Немає вимог'},
-    ]))}`;
+    <p class="step-eyebrow">${t('pm_tech_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_tech_title')}</h3>
+    <p class="step-hint">${t('pm_tech_hint')}</p>
+    ${t2==='new'?`
+    ${qnp(t('pm_theme_q'),'',rpills('pm_theme',t('pm_theme_opts')))}
+    ${qnp(t('pm_existing_site_q'),'',rpills('pm_existingSite',t('pm_existing_site_opts')))}
+    ${qnp(t('pm_shopify_access_q'),'',rpills('pm_shopifyAccess',t('pm_shopify_access_opts')))}
+    `:''}
+    ${t2==='redesign'||t2==='features'?`
+    ${qn(t('pm_current_theme_q'),t('pm_current_theme_hint'),tf('pm_currentTheme',t('pm_current_theme_ph')))}
+    ${qnp(t('pm_theme_type_q'),'',rpills('pm_themeType',t('pm_theme_type_opts')))}
+    ${qnp(t('pm_checkout_q'),t('pm_checkout_hint'),rpills('pm_checkoutChanges',t('pm_checkout_opts')))}
+    `:''}
+    ${t2==='integration'?`
+    ${qn(t('pm_integration_sys_q'),t('pm_integration_sys_hint'),tf('pm_integrationSystem',t('pm_integration_sys_ph')))}
+    ${qnp(t('pm_integration_app_q'),'',rpills('pm_integrationApp',t('pm_integration_app_opts')))}
+    ${qnp(t('pm_api_docs_q'),'',rpills('pm_apiDocs',t('pm_api_docs_opts')))}
+    ${qnp(t('pm_sync_q'),'',rpills('pm_syncFreq',t('pm_sync_opts')))}
+    `:''}
+    ${t2==='support'?`
+    ${qn(t('pm_support_scope_q'),'',multi('pm_supportScope',t('pm_support_opts')))}
+    ${qnp(t('pm_sla_q'),'',rpills('pm_sla',t('pm_sla_opts')))}
+    ${qnp(t('pm_retainer_q'),'',rpills('pm_retainerHours',t('pm_retainer_opts')))}
+    `:''}
+    ${qnp(t('pm_perf_q'),'',rpills('pm_performance',t('pm_perf_opts')))}`;
 }
 
 function stepPmDesign(){
   return `
-    <p class="step-eyebrow">PM · крок 4 з 7</p>
-    <h3 class="step-title">Дизайн і бренд</h3>
-    <p class="step-hint">Готовність дизайну напряму впливає на scope і старт розробки.</p>
-    ${qn('Брендові матеріали є?','',radio('pm_brandMaterials',[
-      {id:'full',label:'Повний брендбук або brand guidelines'},
-      {id:'partial',label:'Є частково — логотип, кольори без гайду'},
-      {id:'none_theme',label:'Немає — хочемо готову тему без кастомізації'},
-      {id:'none_develop',label:'Немає — потрібна розробка бренду',note:'Розробка бренду — окремий scope, суттєво збільшує бюджет і терміни'},
-    ]))}
-    ${qnp('Є готовий дизайн у Figma або аналогу?','',rpills('pm_figmaReady',[
-      {id:'full',label:'Так, є затверджений дизайн усіх сторінок'},
-      {id:'partial',label:'Є частково — ключові сторінки'},
-      {id:'wireframes',label:'Є вайрфрейми без дизайну'},
-      {id:'no',label:'Немає — дизайн потрібно розробити'},
-    ]))}
-    ${A.pm_figmaReady!=='full'?`<div class="note-warn">⚠️ Відсутній або неповний дизайн — ризик затримки старту розробки. Зафіксуй в Assumptions.</div>`:''}
-    ${qnp('Фотографії товарів?','',rpills('pm_productPhotos',[
-      {id:'ready',label:'Є готові якісні фото'},
-      {id:'partial',label:'Є частково'},
-      {id:'no',label:'Немає — будемо готувати',note:'Уточни терміни і формат — може затримати наповнення магазину'},
-    ]))}
-    ${qn('Дизайн-референси','Попроси посилання прямо зараз',tf('pm_designRefs','https://... або назва магазину (попроси скинути в чат)'))}
-    ${qn('Хто відповідає за контент?','Тексти, описи, банери',radio('pm_contentTeam',[
-      {id:'client',label:'Команда клієнта'},
-      {id:'agency',label:'Агентство'},
-      {id:'together',label:'Спільно'},
-      {id:'tbd',label:'Не вирішено',note:'Без чіткої відповідальності — затримки в наповненні магазину'},
-    ]))}
-    ${qn('Хто затверджує дизайн з боку клієнта?','',tf('pm_designApprover','Ім\'я, роль'))}`;
+    <p class="step-eyebrow">${t('pm_design_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_design_title')}</h3>
+    <p class="step-hint">${t('pm_design_hint')}</p>
+    ${qn(t('pm_brand_q'),'',radio('pm_brandMaterials',t('pm_brand_opts')))}
+    ${qnp(t('pm_figma_q'),'',rpills('pm_figmaReady',t('pm_figma_opts')))}
+    ${A.pm_figmaReady!=='full'?`<div class="note-warn">${t('pm_figma_warn')}</div>`:''}
+    ${qnp(t('pm_photos_q'),'',rpills('pm_productPhotos',t('pm_photos_opts')))}
+    ${qn(t('pm_refs_q'),t('pm_refs_hint'),tf('pm_designRefs',t('pm_refs_ph')))}
+    ${qn(t('pm_content_q'),t('pm_content_hint'),radio('pm_contentTeam',t('pm_content_opts')))}
+    ${qn(t('pm_approver_q'),'',tf('pm_designApprover',t('pm_approver_ph')))}`;
 }
 
 function stepPmFunc(){
   return `
-    <p class="step-eyebrow">PM · крок 5 з 7</p>
-    <h3 class="step-title">Функціональність</h3>
-    <p class="step-hint">Нестандартний функціонал = кастомна розробка або додаткові apps.</p>
-    ${qnp('Знижки і промоакції','Нативно: %, фіксована сума, безкоштовна доставка, промокоди, buy X get Y',rpills('pm_discounts',[
-      {id:'standard',label:'Стандартного Shopify достатньо'},
-      {id:'complex',label:'Складна логіка — тиєрові ціни, умовні бандли',note:'Потрібні Shopify Functions або сторонні apps'},
-    ]))}
-    ${qnp('Особистий кабінет покупця','',rpills('pm_accounts',[
-      {id:'none',label:'Не потрібен'},
-      {id:'standard',label:'Стандартний — логін, замовлення, адреси'},
-      {id:'extended',label:'Розширений — вішліст, лояльність, бонуси',note:'Потрібні сторонні apps: Smile.io, LoyaltyLion тощо'},
-    ]))}
-    ${qnp('Підписки / повторювані замовлення','',rpills('pm_subscriptions',[
-      {id:'no',label:'Не потрібно'},
-      {id:'yes',label:'Так — потрібні підписки',note:'Shopify не має нативних підписок. Потрібен окремий app: Recharge, Seal Subscriptions тощо'},
-    ]))}
-    ${qnp('B2B функціональність','',rpills('pm_b2b',[
-      {id:'no',label:'Не потрібна'},
-      {id:'basic',label:'Базова — окремі прайси через app'},
-      {id:'full',label:'Повноцінна нативна B2B',note:'Нативний B2B доступний лише на Shopify Plus'},
-    ]))}
-    ${qnp('Конфігуратор продуктів','',rpills('pm_config',[
-      {id:'no',label:'Не потрібен'},
-      {id:'simple',label:'Прості опції — текстове поле, вибір варіантів (нативний Shopify)'},
-      {id:'complex',label:'Складний конфігуратор або умовні опції',note:'Потрібен спеціалізований app або кастомна розробка'},
-    ]))}
-    ${qnp('Мультимовність?','',rpills('pm_multilang',[
-      {id:'no',label:'Ні — один язик'},
-      {id:'yes_markets',label:'Так — через Shopify Markets / Translate & Adapt'},
-      {id:'yes_apps',label:'Так — через сторонній app (Langify, Weglot)'},
-      {id:'tbd',label:'Потрібно уточнити'},
-    ]))}
-    ${qn('Нестандартні сторінки або секції','Опиши що не вкривається стандартними блоками Shopify',tf('pm_customPages','Наприклад: кастомний лукбук, складний PDP з 3D-переглядом, інтерактивний size guide...',2))}`;
+    <p class="step-eyebrow">${t('pm_func_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_func_title')}</h3>
+    <p class="step-hint">${t('pm_func_hint')}</p>
+    ${qnp(t('pm_discounts_q'),t('pm_discounts_hint'),rpills('pm_discounts',t('pm_discounts_opts')))}
+    ${qnp(t('pm_accounts_q'),'',rpills('pm_accounts',t('pm_accounts_opts')))}
+    ${qnp(t('pm_subs_q'),'',rpills('pm_subscriptions',t('pm_subs_opts')))}
+    ${qnp(t('pm_b2b_q'),'',rpills('pm_b2b',t('pm_b2b_opts')))}
+    ${qnp(t('pm_config_q'),'',rpills('pm_config',t('pm_config_opts')))}
+    ${qnp(t('pm_multilang_q'),'',rpills('pm_multilang',t('pm_multilang_opts')))}
+    ${qn(t('pm_custom_pages_q'),t('pm_custom_pages_hint'),tf('pm_customPages',t('pm_custom_pages_ph'),2))}`;
 }
 
 function stepPmIntegrations(){
   const markets=A.pm_markets||[];
-  const isUA=markets.includes('Україна');
-  const isGlobal=markets.some(m=>m!=='Україна');
+  const isUA=markets.includes('Україна')||markets.includes('Ukraine');
+  const isGlobal=markets.some(m=>m!=='Україна'&&m!=='Ukraine');
   const payOpts=[
     ...(isUA?[{id:'wayforpay',label:'WayForPay'},{id:'liqpay',label:'LiqPay'},{id:'monobank',label:'Monobank'}]:[]),
     ...(isGlobal?[{id:'stripe',label:'Stripe'},{id:'paypal',label:'PayPal'}]:[]),
     {id:'gpay_apay',label:'Google Pay / Apple Pay'},
     {id:'shop_payments',label:'Shopify Payments'},
-    {id:'pay_tbd',label:'Не вирішено'},
+    {id:'pay_tbd',label:lang==='ua'?'Не вирішено':'Not decided'},
   ];
   const shipOpts=[
     ...(isUA?['Нова Пошта','Justin','Укрпошта','Meest']:[]),
     ...(isGlobal?['DHL','FedEx','UPS','ShipStation']:[]),
-    {id:'own_ship',label:'Власна логістика'},
-    {id:'ship_tbd',label:'Не вирішено'},
+    {id:'own_ship',label:lang==='ua'?'Власна логістика':'Own logistics'},
+    {id:'ship_tbd',label:lang==='ua'?'Не вирішено':'Not decided'},
   ];
   return `
-    <p class="step-eyebrow">PM · крок 6 з 7</p>
-    <h3 class="step-title">Інтеграції</h3>
-    <p class="step-hint">Перед кастомною розробкою завжди перевіряємо: чи є готовий Shopify App.</p>
-    ${qn('CRM або ERP','Уточни конкретну назву — критично для оцінки',tf('pm_erp','Назва системи або "немає"'))}
-    ${qn('Система обліку або складу','',tf('pm_accounting','Назва системи або "немає"'))}
-    ${qn('Email-маркетинг / SMS','',radio('pm_email',[
-      'Klaviyo','Mailchimp','eSputnik','SendPulse',
-      {id:'other_email',label:'Інший сервіс'},
-      {id:'none_email',label:'Не використовуємо'},
-    ]))}
-    ${A.pm_email==='other_email'?`<div class="indent">${qn('Назва сервісу','',tf('pm_emailOther','Назва email / SMS сервісу'))}</div>`:''}
-    ${qn('Служби доставки','',multi('pm_shipping',shipOpts))}
-    ${qn('Платіжні системи','Кожна платіжка — окрема інтеграція',multi('pm_payments',payOpts))}
-    ${qn('Аналітика і трекінг','',multi('pm_analytics',[
-      'Google Analytics 4','Meta Pixel','TikTok Pixel','Google Ads',
-      {id:'other_analytics',label:'Інше'},{id:'none_analytics',label:'Не потрібно'},
-    ]))}
-    ${(A.pm_analytics||[]).includes('other_analytics')?`<div class="indent">${qn('Яка аналітика?','',tf('pm_analyticsOther','Назва інструменту'))}</div>`:''}
-    ${qn('Чи є вже встановлені Shopify apps?','',tf('pm_existingApps','Назви apps або "немає"'))}
-    ${qn('Інші системи чи інтеграції','',tf('pm_otherIntegrations','Будь-що що ще треба підключити...',2))}`;
+    <p class="step-eyebrow">${t('pm_int_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_int_title')}</h3>
+    <p class="step-hint">${t('pm_int_hint')}</p>
+    ${qn(t('pm_erp_q'),t('pm_erp_hint'),tf('pm_erp',t('pm_erp_ph')))}
+    ${qn(t('pm_accounting_q'),'',tf('pm_accounting',t('pm_accounting_ph')))}
+    ${qn(t('pm_email_q'),'',radio('pm_email',t('pm_email_opts')))}
+    ${A.pm_email==='other_email'?`<div class="indent">${qn(t('pm_email_other_q'),'',tf('pm_emailOther',t('pm_email_other_ph')))}</div>`:''}
+    ${qn(t('pm_shipping_q'),'',multi('pm_shipping',shipOpts))}
+    ${qn(t('pm_payments_q'),t('pm_payments_hint'),multi('pm_payments',payOpts))}
+    ${qn(t('pm_analytics_q'),'',multi('pm_analytics',t('pm_analytics_opts')))}
+    ${(A.pm_analytics||[]).includes('other_analytics')?`<div class="indent">${qn(t('pm_analytics_other_q'),'',tf('pm_analyticsOther',t('pm_analytics_other_ph')))}</div>`:''}
+    ${qn(t('pm_existing_apps_q'),'',tf('pm_existingApps',t('pm_existing_apps_ph')))}
+    ${qn(t('pm_other_int_q'),'',tf('pm_otherIntegrations',t('pm_other_int_ph'),2))}`;
 }
 
 function stepPmTimeline(){
   const hasDL=A.pm_hasDeadline==='yes';
   return `
-    <p class="step-eyebrow">PM · крок 7 з 7</p>
-    <h3 class="step-title">Терміни і команда</h3>
-    <p class="step-hint">Фіналізуємо пакет для Delivery.</p>
-    ${qnp('Жорсткий дедлайн є?','',rpills('pm_hasDeadline',[
-      {id:'no',label:'Ні, без жорстких термінів'},
-      {id:'yes',label:'Так, є дата або подія'},
-    ]))}
+    <p class="step-eyebrow">${t('pm_timeline_eyebrow')}</p>
+    <h3 class="step-title">${t('pm_timeline_title')}</h3>
+    <p class="step-hint">${t('pm_timeline_hint')}</p>
+    ${qnp(t('pm_dl_q'),'',rpills('pm_hasDeadline',t('pm_dl_opts')))}
     ${hasDL?`<div class="indent">
-      ${qn('Дата або опис','',tf('pm_deadlineDate','"до 1 вересня", "Black Friday", "Q4 2025"'))}
-      ${qnp('Є гнучкість?','',rpills('pm_deadlineFlex',[
-        {id:'flex',label:'Так, є певна гнучкість'},
-        {id:'no',label:'Ні, жорстко',note:'Зафіксуй як ризик у оцінці'},
-      ]))}
+      ${qn(t('pm_dl_date_q'),'',tf('pm_deadlineDate',t('pm_dl_date_ph')))}
+      ${qnp(t('pm_dl_flex_q'),'',rpills('pm_deadlineFlex',t('pm_dl_flex_opts')))}
     </div>`:''}
-    ${qn('Decision-maker клієнта','Хто підписує, хто затверджує рішення',tf('pm_dm','Ім\'я, посада'))}
-    ${qn('Основний контакт по проекту','Хто відповідає на питання і дає фідбек',tf('pm_contact','Ім\'я, месенджер або email'))}
-    ${qnp('Є технічний представник на стороні клієнта?','',rpills('pm_techContact',[
-      {id:'yes',label:'Так, є dev або IT менеджер'},
-      {id:'no',label:'Ні, тільки бізнес-сторона',note:'Без технічного представника — уповільнює технічну комунікацію'},
-    ]))}
-    ${qnp('Хто наповнює магазин товарами?','',rpills('pm_contentFiller',[
-      {id:'client',label:'Команда клієнта'},
-      {id:'agency',label:'Агентство'},
-      {id:'together',label:'Спільно'},
-      {id:'tbd',label:'Не вирішено'},
-    ]))}
-    ${qnp('Планується підтримка після запуску?','',rpills('pm_postLaunch',[
-      {id:'no',label:'Ні — разовий проект'},
-      {id:'minimal',label:'Точкові правки за запитом'},
-      {id:'retainer',label:'Ongoing retainer',info:'Деталі scope і SLA погоджуємо після завершення основного проекту'},
-    ]))}
-    ${qnp('Є ресурс для тестування на стороні клієнта?','UAT — хтось хто перевірить замовлення, оплату, форми',rpills('pm_testingResource',[
-      {id:'yes',label:'Так, є людина'},
-      {id:'no',label:'Ні — тестування повністю на агентстві'},
-    ]))}
-    ${qn('Нотатки по дзвінку','Все що важливо зафіксувати для Delivery',tf('pm_notes','Специфіка клієнта, ризики, важливий контекст...',3))}`;
+    ${qn(t('pm_dm_q'),t('pm_dm_hint'),tf('pm_dm',t('pm_dm_ph')))}
+    ${qn(t('pm_contact_q'),t('pm_contact_hint'),tf('pm_contact',t('pm_contact_ph')))}
+    ${qnp(t('pm_tech_contact_q'),'',rpills('pm_techContact',t('pm_tech_contact_opts')))}
+    ${qnp(t('pm_content_filler_q'),'',rpills('pm_contentFiller',t('pm_content_filler_opts')))}
+    ${qnp(t('pm_post_launch_q'),'',rpills('pm_postLaunch',t('pm_post_launch_opts')))}
+    ${qnp(t('pm_testing_q'),t('pm_testing_hint'),rpills('pm_testingResource',t('pm_testing_opts')))}
+    ${qn(t('pm_notes_q'),t('pm_notes_hint'),tf('pm_notes',t('pm_notes_ph'),3))}`;
 }
 
 function buildPmRisks(){
   const risks=[];
-  if(!A.pm_figmaReady||A.pm_figmaReady==='no') risks.push('Відсутній затверджений дизайн — ризик затримки старту');
-  if(A.pm_projectType==='migration'&&A.pm_dataExport==='no') risks.push('Немає доступу до даних для міграції — залежимо від вендора');
-  if(A.pm_projectType==='migration'&&(A.pm_migrateWhat||[]).includes('seo')) risks.push('SEO-міграція: без правильних редиректів — втрата органічного трафіку');
-  if(A.pm_checkoutChanges==='checkout'&&A.shopifyPlan!=='plus') risks.push('Checkout extensibility вимагає Shopify Plus — план клієнта потрібно уточнити');
-  if(A.pm_b2b==='full'&&A.shopifyPlan!=='plus') risks.push('Нативний B2B доступний лише на Shopify Plus');
-  if(A.pm_contentTeam==='tbd') risks.push('Відповідальність за контент не визначена — ризик затримок');
-  if(A.pm_apiDocs==='no') risks.push('API документація відсутня — оцінка інтеграції неможлива');
-  if(A.pm_syncFreq==='realtime') risks.push('Реал-тайм синхронізація — суттєво вища архітектурна складність');
-  if(A.pm_projectType==='integration'&&A.pm_integrationApp==='no') risks.push('Немає готового App — потрібна кастомна розробка інтеграції');
-  if((A.pm_skuCount==='xlarge')) risks.push('Великий каталог — уточнити вимоги до пошуку і перформансу');
-  if(A.pm_themeType==='custom'&&A.pm_projectType==='redesign') risks.push('Кастомна тема без документації — ризик непередбачених витрат');
+  if(!A.pm_figmaReady||A.pm_figmaReady==='no') risks.push(t('risk_figma'));
+  if(A.pm_projectType==='migration'&&A.pm_dataExport==='no') risks.push(t('risk_export'));
+  if(A.pm_projectType==='migration'&&(A.pm_migrateWhat||[]).includes('seo')) risks.push(t('risk_seo'));
+  if(A.pm_checkoutChanges==='checkout'&&A.shopifyPlan!=='plus') risks.push(t('risk_checkout'));
+  if(A.pm_b2b==='full'&&A.shopifyPlan!=='plus') risks.push(t('risk_b2b'));
+  if(A.pm_contentTeam==='tbd') risks.push(t('risk_content'));
+  if(A.pm_apiDocs==='no') risks.push(t('risk_api'));
+  if(A.pm_syncFreq==='realtime') risks.push(t('risk_realtime'));
+  if(A.pm_projectType==='integration'&&A.pm_integrationApp==='no') risks.push(t('risk_custom_int'));
+  if(A.pm_skuCount==='xlarge') risks.push(t('risk_xlarge'));
+  if(A.pm_themeType==='custom'&&A.pm_projectType==='redesign') risks.push(t('risk_theme'));
   return risks;
 }
 
 function buildPmAssumptions(){
   const a=[];
-  a.push(`Тип проекту: ${A.pm_projectType||'не визначено'}`);
-  if(A.shopifyPlan) a.push(`Shopify план: ${A.shopifyPlan}`);
-  if(A.pm_skuCount) a.push(`Обсяг каталогу: ${A.pm_skuCount} SKU`);
-  if(A.pm_figmaReady==='full') a.push('Затверджений дизайн у Figma є — розробка може стартувати');
-  else a.push('Дизайн не підтверджений — оцінка базується на описі вимог');
-  if(A.pm_projectType==='migration') a.push('Дані для міграції доступні — аудит проводиться до початку розробки');
+  a.push(t('ass_type_pfx')+(A.pm_projectType||t('ass_not_set')));
+  if(A.shopifyPlan) a.push(t('ass_plan_pfx')+A.shopifyPlan);
+  if(A.pm_skuCount) a.push(t('ass_sku_pfx')+A.pm_skuCount+t('ass_sku_sfx'));
+  if(A.pm_figmaReady==='full') a.push(t('ass_figma_ok'));
+  else a.push(t('ass_figma_no'));
+  if(A.pm_projectType==='migration') a.push(t('ass_migration'));
   return a;
 }
 
@@ -909,89 +1857,89 @@ function stepPmSummary(){
   const assumptions=buildPmAssumptions();
 
   const lines=[
-    `PM PROJECT QUALIFICATION BRIEF`,
-    `${'═'.repeat(38)}`,
-    `Дата: ${new Date().toLocaleDateString('uk-UA')}`,
-    ``,
-    `КЛІЄНТ`,
-    A.pm_company?`Компанія: ${A.pm_company}`:'',
-    A.pm_dm?`Decision-maker: ${A.pm_dm}`:'',
-    A.pm_contact?`Контакт: ${A.pm_contact}`:'',
-    ``,
-    `ПРОЕКТ`,
-    A.pm_projectType?`Тип: ${A.pm_projectType}`:'',
-    A.shopifyPlan?`Shopify план: ${A.shopifyPlan}`:'',
-    A.pm_goal?`Бізнес-мета: ${A.pm_goal}`:'',
-    A.pm_skuCount?`Каталог: ${A.pm_skuCount} SKU`:'',
-    (A.pm_markets||[]).length?`Ринки: ${A.pm_markets.join(', ')}`:'',
-    ``,
-    `ДИЗАЙН`,
-    A.pm_brandMaterials?`Бренд: ${A.pm_brandMaterials}`:'',
-    A.pm_figmaReady?`Figma: ${A.pm_figmaReady}`:'',
-    A.pm_designRefs?`Референси: ${A.pm_designRefs}`:'',
-    ``,
-    `ФУНКЦІОНАЛЬНІСТЬ`,
-    A.pm_discounts?`Знижки: ${A.pm_discounts}`:'',
-    A.pm_accounts?`Кабінет покупця: ${A.pm_accounts}`:'',
-    A.pm_subscriptions?`Підписки: ${A.pm_subscriptions}`:'',
-    A.pm_b2b?`B2B: ${A.pm_b2b}`:'',
-    A.pm_multilang?`Мультимова: ${A.pm_multilang}`:'',
-    ``,
-    `ІНТЕГРАЦІЇ`,
-    A.pm_erp?`ERP/CRM: ${A.pm_erp}`:'',
-    A.pm_accounting?`Облік/Склад: ${A.pm_accounting}`:'',
-    A.pm_email?`Email: ${A.pm_email}`:'',
-    (A.pm_payments||[]).length?`Платіжки: ${A.pm_payments.join(', ')}`:'',
-    (A.pm_shipping||[]).length?`Доставка: ${A.pm_shipping.join(', ')}`:'',
-    (A.pm_analytics||[]).length?`Аналітика: ${A.pm_analytics.join(', ')}`:'',
-    ``,
-    `ТЕРМІНИ`,
-    A.pm_hasDeadline==='yes'&&A.pm_deadlineDate?`Дедлайн: ${A.pm_deadlineDate}`:'Без жорсткого дедлайну',
-    A.pm_postLaunch?`Підтримка після запуску: ${A.pm_postLaunch}`:'',
-    A.pm_notes?`\nНОТАТКИ\n${A.pm_notes}`:'',
-    assumptions.length?`\nASSUMPTIONS\n${assumptions.map(a=>'~ '+a).join('\n')}`:'',
-    risks.length?`\nRISK LIST\n${risks.map(r=>'! '+r).join('\n')}`:'',
-    ``,`${'═'.repeat(38)}`,
-    `[Grodas · Shopify Stores Presale · PM]`
+    t('exp_pm_header'),
+    '═'.repeat(38),
+    `${t('exp_date')}: ${new Date().toLocaleDateString(lang==='ua'?'uk-UA':'en-US')}`,
+    '',
+    t('exp_client'),
+    A.pm_company?`${lang==='ua'?'Компанія':'Company'}: ${A.pm_company}`:'',
+    A.pm_dm?`${t('pm_key_dm')}: ${A.pm_dm}`:'',
+    A.pm_contact?`${t('pm_key_contact')}: ${A.pm_contact}`:'',
+    '',
+    t('exp_project'),
+    A.pm_projectType?`${t('pm_key_type')}: ${A.pm_projectType}`:'',
+    A.shopifyPlan?`${t('pm_key_plan')}: ${A.shopifyPlan}`:'',
+    A.pm_goal?`${t('pm_key_goal')}: ${A.pm_goal}`:'',
+    A.pm_skuCount?`${t('pm_key_sku')}: ${A.pm_skuCount}`:'',
+    (A.pm_markets||[]).length?`${t('pm_key_markets')}: ${A.pm_markets.join(', ')}`:'',
+    '',
+    t('exp_design'),
+    A.pm_brandMaterials?`${t('pm_key_brand')}: ${A.pm_brandMaterials}`:'',
+    A.pm_figmaReady?`${t('pm_key_figma')}: ${A.pm_figmaReady}`:'',
+    A.pm_designRefs?`${t('pm_key_refs')}: ${A.pm_designRefs}`:'',
+    '',
+    t('exp_func'),
+    A.pm_discounts?`${t('pm_key_discounts')}: ${A.pm_discounts}`:'',
+    A.pm_accounts?`${t('pm_key_accounts')}: ${A.pm_accounts}`:'',
+    A.pm_subscriptions?`${t('pm_key_subs')}: ${A.pm_subscriptions}`:'',
+    A.pm_b2b?`${t('pm_key_b2b')}: ${A.pm_b2b}`:'',
+    A.pm_multilang?`${t('pm_key_multilang')}: ${A.pm_multilang}`:'',
+    '',
+    t('exp_integrations'),
+    A.pm_erp?`${t('pm_key_erp')}: ${A.pm_erp}`:'',
+    A.pm_accounting?`${t('pm_key_accounting')}: ${A.pm_accounting}`:'',
+    A.pm_email?`${t('pm_key_email')}: ${A.pm_email}`:'',
+    (A.pm_payments||[]).length?`${t('pm_key_payments')}: ${A.pm_payments.join(', ')}`:'',
+    (A.pm_shipping||[]).length?`${t('pm_key_shipping')}: ${A.pm_shipping.join(', ')}`:'',
+    (A.pm_analytics||[]).length?`${lang==='ua'?'Аналітика':'Analytics'}: ${A.pm_analytics.join(', ')}`:'',
+    '',
+    t('exp_timeline'),
+    A.pm_hasDeadline==='yes'&&A.pm_deadlineDate?`${t('pm_key_deadline')}: ${A.pm_deadlineDate}`:t('pm_no_deadline'),
+    A.pm_postLaunch?`${t('pm_key_postlaunch')}: ${A.pm_postLaunch}`:'',
+    A.pm_notes?`\n${t('exp_notes')}\n${A.pm_notes}`:'',
+    assumptions.length?`\n${t('exp_assumptions')}\n${assumptions.map(a=>'~ '+a).join('\n')}`:'',
+    risks.length?`\n${t('exp_risks')}\n${risks.map(r=>'! '+r).join('\n')}`:'',
+    '','═'.repeat(38),
+    t('exp_footer_pm')
   ].filter(l=>l!=='').join('\n').replace(/\n{3,}/g,'\n\n');
 
-  return `<p class="step-eyebrow">PM Brief · Summary</p>
-  <h3 class="step-title">${A.pm_company||'Проект'}</h3>
-  <div class="decision-badge badge-pd">📐 PM Delivery Brief</div>
+  return `<p class="step-eyebrow">${t('pm_summary_eyebrow')}</p>
+  <h3 class="step-title">${A.pm_company||lang==='ua'?'Проект':'Project'}</h3>
+  <div class="decision-badge badge-pd">${t('pm_summary_badge')}</div>
 
-  ${sblock('📦','Проект',
-    sr('Тип','pm_projectType')+sr('Shopify план','shopifyPlan')+sr('Каталог','pm_skuCount')+
-    (A.pm_goal?`<div class="sum-row"><span class="sum-key">Бізнес-мета</span><span class="sum-val">${A.pm_goal}</span></div>`:'')+
-    ((A.pm_markets||[]).length?`<div class="sum-row"><span class="sum-key">Ринки</span><span class="sum-val">${A.pm_markets.join(', ')}</span></div>`:'')+
-    sr('Тема','pm_theme')+sr('Поточна тема','pm_currentTheme')
+  ${sblock('📦',t('pm_sum_project'),
+    sr(t('pm_key_type'),'pm_projectType')+sr(t('pm_key_plan'),'shopifyPlan')+sr(t('pm_key_sku'),'pm_skuCount')+
+    (A.pm_goal?`<div class="sum-row"><span class="sum-key">${t('pm_key_goal')}</span><span class="sum-val">${A.pm_goal}</span></div>`:'')+
+    ((A.pm_markets||[]).length?`<div class="sum-row"><span class="sum-key">${t('pm_key_markets')}</span><span class="sum-val">${A.pm_markets.join(', ')}</span></div>`:'')+
+    sr(t('pm_key_theme'),'pm_theme')+sr(t('pm_key_cur_theme'),'pm_currentTheme')
   )}
-  ${sblock('🎨','Дизайн',
-    sr('Бренд','pm_brandMaterials')+sr('Figma','pm_figmaReady')+
-    (A.pm_designRefs?`<div class="sum-row"><span class="sum-key">Референси</span><span class="sum-val">${A.pm_designRefs}</span></div>`:'')+
-    sr('Контент','pm_contentTeam')
+  ${sblock('🎨',t('pm_sum_design'),
+    sr(t('pm_key_brand'),'pm_brandMaterials')+sr(t('pm_key_figma'),'pm_figmaReady')+
+    (A.pm_designRefs?`<div class="sum-row"><span class="sum-key">${t('pm_key_refs')}</span><span class="sum-val">${A.pm_designRefs}</span></div>`:'')+
+    sr(t('pm_key_content'),'pm_contentTeam')
   )}
-  ${sblock('⚙️','Функціонал',
-    sr('Знижки','pm_discounts')+sr('Кабінет','pm_accounts')+sr('Підписки','pm_subscriptions')+
-    sr('B2B','pm_b2b')+sr('Мультимова','pm_multilang')
+  ${sblock('⚙️',t('pm_sum_func'),
+    sr(t('pm_key_discounts'),'pm_discounts')+sr(t('pm_key_accounts'),'pm_accounts')+sr(t('pm_key_subs'),'pm_subscriptions')+
+    sr(t('pm_key_b2b'),'pm_b2b')+sr(t('pm_key_multilang'),'pm_multilang')
   )}
-  ${sblock('🔗','Інтеграції',
-    sr('ERP/CRM','pm_erp')+sr('Облік','pm_accounting')+sr('Email','pm_email')+
-    ((A.pm_payments||[]).length?`<div class="sum-row"><span class="sum-key">Платіжки</span><span class="sum-val">${A.pm_payments.join(', ')}</span></div>`:'')+
-    ((A.pm_shipping||[]).length?`<div class="sum-row"><span class="sum-key">Доставка</span><span class="sum-val">${A.pm_shipping.join(', ')}</span></div>`:'')
+  ${sblock('🔗',t('pm_sum_integrations'),
+    sr(t('pm_key_erp'),'pm_erp')+sr(t('pm_key_accounting'),'pm_accounting')+sr(t('pm_key_email'),'pm_email')+
+    ((A.pm_payments||[]).length?`<div class="sum-row"><span class="sum-key">${t('pm_key_payments')}</span><span class="sum-val">${A.pm_payments.join(', ')}</span></div>`:'')+
+    ((A.pm_shipping||[]).length?`<div class="sum-row"><span class="sum-key">${t('pm_key_shipping')}</span><span class="sum-val">${A.pm_shipping.join(', ')}</span></div>`:'')
   )}
-  ${sblock('📅','Терміни і команда',
-    (A.pm_hasDeadline==='yes'&&A.pm_deadlineDate?`<div class="sum-row"><span class="sum-key">Дедлайн</span><span class="sum-val">${A.pm_deadlineDate}</span></div>`:'')+
-    sr('DM','pm_dm')+sr('Контакт','pm_contact')+sr('Підтримка','pm_postLaunch')
+  ${sblock('📅',t('pm_sum_timeline'),
+    (A.pm_hasDeadline==='yes'&&A.pm_deadlineDate?`<div class="sum-row"><span class="sum-key">${t('pm_key_deadline')}</span><span class="sum-val">${A.pm_deadlineDate}</span></div>`:'')+
+    sr(t('pm_key_dm'),'pm_dm')+sr(t('pm_key_contact'),'pm_contact')+sr(t('pm_key_postlaunch'),'pm_postLaunch')
   )}
-  ${assumptions.length?sblock('~','Assumptions',assumptions.map(a=>`<div class="sum-row"><span class="sum-val">${a}</span></div>`).join('')):''}
-  ${risks.length?sblock('!','Risk List',risks.map(r=>`<div class="sum-row"><span class="sum-val flag-stop">! ${r}</span></div>`).join('')):''}
-  ${A.pm_notes?sblock('📝','Нотатки',`<div class="sum-row"><span class="sum-val">${A.pm_notes}</span></div>`):''}
+  ${assumptions.length?sblock('~',t('pm_sum_assumptions'),assumptions.map(a=>`<div class="sum-row"><span class="sum-val">${a}</span></div>`).join('')):''}
+  ${risks.length?sblock('!',t('pm_sum_risks'),risks.map(r=>`<div class="sum-row"><span class="sum-val flag-stop">! ${r}</span></div>`).join('')):''}
+  ${A.pm_notes?sblock('📝',t('pm_sum_notes'),`<div class="sum-row"><span class="sum-val">${A.pm_notes}</span></div>`):''}
 
   <div class="export-area" id="exportArea">${lines}</div>
   <div class="export-actions">
-    <button class="btn-copy" onclick="copyExport()">📋 Копіювати для Jira</button>
-    <button class="btn-new" onclick="goHome()">← На головну</button>
-    <button class="btn-new" onclick="restartFlow()">+ Новий бриф</button>
+    <button class="btn-copy" onclick="copyExport()">${t('sum_copy_btn')}</button>
+    <button class="btn-new" onclick="goHome()">${t('sum_home_btn')}</button>
+    <button class="btn-new" onclick="restartFlow()">+ ${t('sum_new_pm')}</button>
   </div>`;
 }
 
@@ -1023,7 +1971,6 @@ function render(){
   const idx=stepIdx;
   const isSummary=s==='summary'||s==='pm_summary';
 
-  // Progress
   if(!isSummary){
     const pct=((idx+1)/st.length)*100;
     document.getElementById('progressFill').style.width=pct+'%';
@@ -1034,7 +1981,6 @@ function render(){
     document.getElementById('progressWrap').style.display='none';
   }
 
-  // Render step
   let html='';
   if(mode==='sales'){
     if(s==='client') html=stepSalesClient();
@@ -1055,14 +2001,12 @@ function render(){
   }
   document.getElementById('cardBody').innerHTML=html;
 
-  // Footer
   const nav=document.getElementById('footerNav');
   const back=document.getElementById('btnBack');
   const home2=document.getElementById('btnHome2');
   const next=document.getElementById('btnNext');
   if(isSummary){ nav.style.display='none'; return; }
   nav.style.display='flex';
-  // На першому кроці — показуємо "Головна" замість "Назад"
   if(stepIdx===0){
     back.style.display='none';
     home2.style.display='';
@@ -1072,7 +2016,10 @@ function render(){
   }
   next.disabled=!canNext();
   const isDecision=s==='decision';
-  next.textContent=isDecision?'Сформувати Summary →':'Далі →';
+  document.getElementById('btnNextLabel').textContent=isDecision?t('btn_summary'):t('btn_next');
+  document.getElementById('btnBackLabel').textContent=t('btn_back');
+  document.getElementById('btnHome2Label').textContent=t('btn_home_main');
+  document.getElementById('btnHomeLabel').textContent=t('btn_home');
 }
 
 function goNext(){
@@ -1091,8 +2038,9 @@ function restartFlow(){
 // ═══════════════════════════════════════════════════════════════════
 function toggleKey(){
   const f=document.getElementById('apiKey');
+  const btn=document.getElementById('toggleKeyBtn');
   f.type=f.type==='password'?'text':'password';
-  event.target.textContent=f.type==='password'?'Показати':'Сховати';
+  btn.textContent=f.type==='password'?t('pm_ai_key_show'):t('pm_ai_key_hide');
 }
 
 async function autofillPm(){
@@ -1100,8 +2048,8 @@ async function autofillPm(){
   const text=(document.getElementById('prefillText')?.value||'').trim();
   const status=document.getElementById('aiStatus');
   const btn=document.getElementById('aiBtn');
-  if(!key||!text){ status.textContent='Вкажи API ключ і текст'; return; }
-  btn.textContent='⏳ Аналізую...'; btn.style.opacity='.6'; btn.style.pointerEvents='none';
+  if(!key||!text){ status.textContent=lang==='ua'?'Вкажи API ключ і текст':'Enter API key and text'; return; }
+  btn.textContent=t('pm_ai_loading'); btn.style.opacity='.6'; btn.style.pointerEvents='none';
   status.textContent='';
   try{
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
@@ -1109,12 +2057,12 @@ async function autofillPm(){
       headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({
         model:'claude-sonnet-4-20250514',max_tokens:1500,
-        messages:[{role:'user',content:`Ти — PM-аналітик Shopify-агентства. Витягни з тексту дані для Project Brief і поверни ТІЛЬКИ JSON без markdown.
+        messages:[{role:'user',content:`You are a PM analyst at a Shopify agency. Extract data from the text for a Project Brief and return ONLY JSON without markdown.
 
-Текст:
+Text:
 """${text}"""
 
-JSON поля (null якщо відсутнє):
+JSON fields (null if missing):
 {
   "pm_company": string|null,
   "pm_projectType": "new"|"redesign"|"migration"|"features"|"integration"|"support"|null,
@@ -1139,11 +2087,11 @@ JSON поля (null якщо відсутнє):
     const raw=data.content?.[0]?.text||'';
     const parsed=JSON.parse(raw.replace(/```json|```/g,'').trim());
     Object.entries(parsed).forEach(([k,v])=>{ if(v!==null) A[k]=v; });
-    status.textContent='✓ Заповнено';
+    status.textContent=t('pm_ai_done');
     stepIdx=1; render();
   } catch(e){
-    status.textContent='Помилка: '+e.message;
-    btn.textContent='✦ Аналізувати →'; btn.style.opacity='1'; btn.style.pointerEvents='auto';
+    status.textContent=(lang==='ua'?'Помилка: ':'Error: ')+e.message;
+    btn.textContent=t('pm_ai_btn'); btn.style.opacity='1'; btn.style.pointerEvents='auto';
   }
 }
 
@@ -1151,8 +2099,8 @@ function copyExport(){
   const text=document.getElementById('exportArea')?.textContent||'';
   navigator.clipboard.writeText(text).then(()=>{
     const btn=event.target;
-    btn.textContent='✓ Скопійовано';
-    setTimeout(()=>btn.textContent='📋 Копіювати для Jira',2000);
+    btn.textContent=lang==='ua'?'✓ Скопійовано':'✓ Copied';
+    setTimeout(()=>btn.textContent=t('sum_copy_btn'),2000);
   });
 }
 
@@ -1166,11 +2114,17 @@ function checkPwd(){
     document.getElementById('mainShell').style.display='';
     render();
   } else {
-    document.getElementById('pwdError').textContent='Невірний пароль';
+    document.getElementById('pwdError').textContent=t('pwd_error');
     document.getElementById('pwdInput').value='';
     document.getElementById('pwdInput').focus();
   }
 }
+
+// Init lang state
+document.getElementById('btnLang').textContent = lang==='ua' ? 'EN' : 'UA';
+document.getElementById('pwdSubText').textContent = t('pwd_sub');
+document.getElementById('pwdBtnText').textContent = t('pwd_btn');
+
 if(sessionStorage.getItem('grodas_auth')==='1'){
   document.getElementById('pwd-overlay').style.display='none';
   document.getElementById('mainShell').style.display='';
